@@ -22,9 +22,9 @@ jobs:
       - name: Script unit tests
         run: python3 -m unittest discover -s Scripts -p 'test_*.py'
 
-  # The probes drive AppKit and Core Audio. They are the real regression gate for
-  # HUD/audio lifecycle work, but they need a GUI session and an input device, so
-  # whether a hosted runner can run them is checked here rather than assumed.
+  # The probes drive AppKit and Core Audio, and are the regression gate for
+  # HUD/audio lifecycle work. Hosted runners were verified to provide the GUI
+  # session and input device they need, so a failure here is a real one.
   probes:
     name: AppKit and audio probes
     runs-on: macos-26
