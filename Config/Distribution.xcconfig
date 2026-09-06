@@ -1,0 +1,15 @@
+// Distribution build settings. Use with:
+//   xcodebuild -xcconfig Config/Distribution.xcconfig ...
+//
+// This configuration is for a build that leaves this Mac. It must not inherit
+// anything specific to the development checkout.
+#include "Signing.xcconfig"
+
+// A shipped app has no checkout to read models from. Clearing this makes
+// DictationController fall back to ~/Library/Application Support/Quibble/Models.
+QUIBBLE_MODELS_PATH_DEFAULT =
+
+// Developer ID signing and a hardened runtime are required for notarization.
+CODE_SIGN_IDENTITY = Developer ID Application
+CODE_SIGN_STYLE = Manual
+ENABLE_HARDENED_RUNTIME = YES

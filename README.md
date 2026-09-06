@@ -6,6 +6,8 @@ Dictation for your Mac, with local speech recognition, personal vocabulary, and 
 
 Hold a shortcut, speak, and release to insert the result in the current text field. Prefer hands-free recording? Press the toggle shortcut once to start and again to finish. A floating HUD shows listening, processing, delivery, and no-speech states.
 
+<img src="Docs/Screenshots/home.png" alt="Quibble's Home screen, showing the selected speech model and the hold and toggle dictation shortcuts">
+
 **Status:** an actively developed, signed macOS application. It is usable for local testing, but is not yet a packaged, notarized public release. Context-aware assistants and voice commands are future work.
 
 ## What it does
@@ -16,6 +18,12 @@ Hold a shortcut, speak, and release to insert the result in the current text fie
 - **Cross-app insertion and recovery.** Paste into the captured destination, keep a copy when delivery cannot be confirmed, and use a separate shortcut to paste the last transcript.
 - **Useful history.** Search text, compare original and final output, see source-app icons, speaking pace, and a timestamped timeline. Optional online speaker labels distinguish voices.
 - **Controls when you need them.** Selective model downloads, independent HUD layout/material settings, editable shortcuts, per-stage diagnostics, and supported ASR controls in Developer.
+
+| Models library | Modes and workflows | Vocabulary |
+| --- | --- | --- |
+| <img src="Docs/Screenshots/models.png" alt="The models library listing local speech models with relative accuracy, relative speed, and download size"> | <img src="Docs/Screenshots/modes.png" alt="Two modes, each showing its speech model and the ordered workflow steps"> | <img src="Docs/Screenshots/vocabulary.png" alt="Saved words and correction rules, with a recording control to test them"> |
+
+Screenshots are from a development build on macOS 26.6.1; see [Docs/Screenshots](Docs/Screenshots/README.md).
 
 ## First dictation
 
@@ -78,7 +86,14 @@ Text history is **session-only by default**. Opt-in local history retains up to 
 
 Use an **Apple Silicon Mac**, Xcode with Swift 6.2 support, and the matching Metal toolchain. The project targets macOS 14 and later; current live validation is on macOS 26.6.1 with an M5 Max. Older systems, smaller-memory Macs, and broad language coverage have not been fully validated. English is the tested baseline.
 
-Open `Quibble.xcodeproj`, select **Quibble → My Mac**, and configure your own development team for a separate checkout. The existing local installation uses `Config/Signing.xcconfig`; keep its bundle ID, team, compatible signing requirements, and installed path stable when testing updates. Xcode sign-in alone does not establish permission retention.
+Signing uses your own Apple Developer team, which is not tracked in Git:
+
+```sh
+cp Config/Signing.local.xcconfig.example Config/Signing.local.xcconfig
+# then set QUIBBLE_DEVELOPMENT_TEAM to your team ID
+```
+
+Open `Quibble.xcodeproj` and select **Quibble → My Mac**. Keep a checkout's bundle ID, team, compatible signing requirements, and installed path stable when testing updates. Xcode sign-in alone does not establish permission retention.
 
 For command-line development, stage the build separately from the running app:
 
@@ -96,7 +111,7 @@ On the current development Mac, append `-toolchain com.apple.dt.toolchain.Metal.
 
 Do not replace a running app bundle. Wait until Quibble is idle, quit it, and install the verified staged app at the existing development path, `DerivedData/Build/Products/Release/Quibble.app`. Verify the installed signature before reopening. Session-only history does not survive a restart.
 
-The current development configuration defaults to the checkout’s `Models` directory; **Models → Storage & loading → Choose folder…** lets you choose another folder. This checkout-specific default still needs a distribution migration. For explicit command-line downloads:
+A development build defaults to the checkout’s `Models` directory; **Models → Storage & loading → Choose folder…** lets you choose another folder. `Scripts/build-release.sh` builds with `Config/Distribution.xcconfig`, which clears that default so a distributed app uses `~/Library/Application Support/Quibble/Models` instead, and fails the build if a checkout path leaks into the bundle. That script stops before notarization and prints the `notarytool` commands, which need your own credentials. For explicit command-line downloads:
 
 ```sh
 python3 Scripts/download-models.py cohere-4bit

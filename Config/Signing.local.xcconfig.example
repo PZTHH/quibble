@@ -1,0 +1,4 @@
+// Copy to Config/Signing.local.xcconfig and set your own Apple Developer team ID.
+// Find it in Xcode → Settings → Accounts, or at developer.apple.com → Membership.
+// The real file is ignored by Git so each checkout signs with its own identity.
+QUIBBLE_DEVELOPMENT_TEAM = ABCDE12345

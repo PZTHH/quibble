@@ -174,8 +174,13 @@ final class DictationController: ObservableObject {
     private var observers: [NSObjectProtocol] = []
 
     init() {
-        let defaultPath = Bundle.main.object(forInfoDictionaryKey: "QuibblePrototypeModelsPath") as? String
-            ?? FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Library/Application Support/Quibble/Models").path
+        // A development build points at the checkout's Models folder. A distribution
+        // build leaves QUIBBLE_MODELS_PATH_DEFAULT empty, so the key expands to an
+        // empty string and must be treated as absent rather than as a valid path.
+        let defaultPath = ModelRootDefault.path(
+            configured: Bundle.main.object(forInfoDictionaryKey: "QuibblePrototypeModelsPath") as? String,
+            fallback: FileManager.default.homeDirectoryForCurrentUser
+                .appendingPathComponent("Library/Application Support/Quibble/Models").path)
         modelRoot = URL(fileURLWithPath: UserDefaults.standard.string(forKey: "modelRoot") ?? defaultPath)
         // Choose formats only for a new installation. Existing modes and manual
         // precision choices remain authoritative, including original weights.

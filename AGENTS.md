@@ -25,7 +25,7 @@ Quibble is a native macOS dictation app in active development. Read the relevant
 - `Models.lock.json` and `App/Resources/ModelCatalog.json`: CLI and bundled model manifests. Keep corresponding entries, revisions, and capabilities consistent.
 - `Scripts/generate-project.py`: source for the generated Xcode project. The App group is filesystem-synchronized. When adding App files, inspect the root `Package.swift` targets’ explicit source/exclusion lists as well.
 - `README.md`: current app and build introduction. `Docs/README.md` indexes setup, planning, historical notes, and local visual references. Put detailed research, measurements, reproductions, and historical change logs in dated `Benchmarks/` documents.
-- Keep the repository root for entry points and build manifests. Store setup notes in `Docs/Setup/`, plans in `Docs/Planning/`, and competitor reference images in `Docs/References/`; maintain links when moving documentation. Reference screenshots and raw local results are ignored for future source control, but remain available locally. Do not move or delete models, recordings, or test fixtures during documentation cleanup.
+- Keep the repository root for entry points and build manifests. Store setup notes in `Docs/Setup/`, plans in `Docs/Planning/`, competitor reference images in `Docs/References/`, and the README's own interface screenshots in `Docs/Screenshots/`; maintain links when moving documentation. Refresh a screenshot when the interface it shows changes, and keep real transcripts, history, and vocabulary out of it. Reference screenshots and raw local results are ignored for future source control, but remain available locally. Do not move or delete models, recordings, or test fixtures during documentation cleanup.
 
 ## Recording, insertion, and privacy invariants
 
@@ -42,11 +42,11 @@ Quibble is a native macOS dictation app in active development. Read the relevant
 
 ## Signing and installation
 
-The existing development app uses bundle ID `com.pezhvak.quibble`, team `CU2YB94J43`, and Apple Development signing in `Config/Signing.xcconfig`. Its stable path is:
+The existing development app uses bundle ID `com.pezhvak.quibble`, Apple Development signing from `Config/Signing.xcconfig`, and the team ID in `Config/Signing.local.xcconfig`, which is untracked and specific to this Mac. Its stable path is:
 
 `/Users/march/Projects/quibble/DerivedData/Build/Products/Release/Quibble.app`
 
-Keep that identity and path stable for this installation. Do not alternate ad-hoc/development/distribution signing or reset TCC to make a test pass. Developers on other machines configure their own team in their own checkout. Compatible designated requirements are a prerequisite, not proof that permissions survive a real update.
+Keep that identity and path stable for this installation. Do not alternate ad-hoc/development/distribution signing or reset TCC to make a test pass. Developers on other machines copy `Config/Signing.local.xcconfig.example` and set their own team there. `Config/Distribution.xcconfig` and `Scripts/build-release.sh` cover builds that leave this Mac; they clear the checkout models path and require Developer ID signing. Compatible designated requirements are a prerequisite, not proof that permissions survive a real update.
 
 Build into a staging directory so compilation cannot mutate the running app bundle:
 

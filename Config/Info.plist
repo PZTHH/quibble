@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
     <key>QuibblePrototypeModelsPath</key>
-    <string>$(SRCROOT)/Models</string>
+    <string>$(QUIBBLE_MODELS_PATH_DEFAULT)</string>
 </dict>
 </plist>

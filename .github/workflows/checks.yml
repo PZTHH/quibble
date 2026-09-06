@@ -1,0 +1,38 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  package-tests:
+    name: Package tests
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show toolchain
+        run: swift --version && xcodebuild -version
+      - name: Swift package tests
+        run: swift test --scratch-path .build/ci-tests
+      - name: Script unit tests
+        run: python3 -m unittest discover -s Scripts -p 'test_*.py'
+
+  # The probes drive AppKit and Core Audio. They are the real regression gate for
+  # HUD/audio lifecycle work, but they need a GUI session and an input device, so
+  # whether a hosted runner can run them is checked here rather than assumed.
+  probes:
+    name: AppKit and audio probes
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: HUD audio callback isolation
+        run: python3 Scripts/check-hud-audio-callback.py
+      - name: Audio input device selection
+        run: python3 Scripts/check-audio-input-devices.py
+      - name: Menu bar
+        run: python3 Scripts/check-menu-bar.py

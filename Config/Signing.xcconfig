@@ -1,6 +1,12 @@
 // Keep these stable across local builds. Do not use ad-hoc signing for permission tests.
+//
+// Your Apple Developer team is not tracked. Copy Signing.local.xcconfig.example to
+// Config/Signing.local.xcconfig and set QUIBBLE_DEVELOPMENT_TEAM to your own team ID.
+// That file is ignored by Git, so each checkout signs with its own identity.
+#include? "Signing.local.xcconfig"
+
 PRODUCT_BUNDLE_IDENTIFIER = com.pezhvak.quibble
-DEVELOPMENT_TEAM = CU2YB94J43
+DEVELOPMENT_TEAM = $(QUIBBLE_DEVELOPMENT_TEAM)
 CODE_SIGN_STYLE = Automatic
 CODE_SIGN_IDENTITY = Apple Development
 CODE_SIGN_ENTITLEMENTS = Config/Quibble.entitlements
@@ -10,6 +16,10 @@ MACOSX_DEPLOYMENT_TARGET = 14.0
 SWIFT_VERSION = 6.0
 GENERATE_INFOPLIST_FILE = YES
 INFOPLIST_FILE = Config/Info.plist
+
+// Development builds read models from the checkout. Config/Distribution.xcconfig
+// clears this so a shipped app falls back to Application Support.
+QUIBBLE_MODELS_PATH_DEFAULT = $(SRCROOT)/Models
 INFOPLIST_KEY_NSMicrophoneUsageDescription = Quibble records your voice while you dictate. Your selected speech model transcribes it on your Mac or with an online provider you configure.
 INFOPLIST_KEY_LSApplicationCategoryType = public.app-category.productivity
 MARKETING_VERSION = 0.1.0
