@@ -21,7 +21,7 @@ The planning and historical documents are dated snapshots. The root README descr
 
 [Benchmarks/](../Benchmarks/) retains the research, measurements, fixtures, and reproducible probes at their established paths. Begin with the [production review](../Benchmarks/PRODUCTION-REVIEW-2026-09-06.md), then read the later notes relevant to a change. Raw result directories can contain private text and are excluded from future source control; authored fixtures and probe licenses remain visible.
 
-[Superwhisper references](References/Superwhisper/README.md) describe the locally retained competitor screenshots. These images support design research and are not Quibble app assets or licensed redistribution material.
+[Design inspiration: Superwhisper](References/Superwhisper/README.md) records what that app's interface taught Quibble's design. The screenshots behind the research stay local: they are another product's interface, carry no redistribution permission, and are not Quibble app assets.
 
 ## Keeping the repository organized
 

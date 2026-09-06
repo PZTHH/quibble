@@ -158,7 +158,7 @@ DerivedData/Build/Products/Release/Quibble.app/Contents/MacOS/Quibble \
 
 Add `--cleanup` for basic cleanup, or `--workflow-file path/to/workflow.json` to run a serialized mode; the workflow takes precedence over legacy flags. The first run includes model loading, and later runs reuse models. These reports measure file processing, not microphone or release-to-insert latency. Peak MLX allocation is not current app resident memory. Synthetic speech fixtures are smoke tests, not a human-dictation quality benchmark.
 
-See [AGENTS.md](AGENTS.md) for working conventions and the [documentation index](Docs/README.md) for setup and planning notes. Local recordings, model downloads, raw benchmark outputs, and competitor screenshots are excluded from source control by `.gitignore`. Apple Silicon runtime findings are in the [runtime review](Benchmarks/APPLE-SILICON-RUNTIME-2026-09-06.md); current and deferred models are documented in the [ASR coverage report](Benchmarks/ASR-MODEL-COVERAGE-2026-09-06.md). Recent evidence includes [setup replay and delivery feedback](Benchmarks/BUILD-27-SETUP-FEEDBACK.md), [setup and model checks](Benchmarks/BUILD-26-SETUP-MODELS.md), [recording and history](Benchmarks/BUILD-23-RECORDING-HISTORY.md) and [audio-cue/no-speech checks](Benchmarks/BUILD-24-AUDIO-CUES.md).
+See [AGENTS.md](AGENTS.md) for working conventions and the [documentation index](Docs/README.md) for setup and planning notes. Local recordings, model downloads, raw benchmark outputs, and reference screenshots are excluded from source control by `.gitignore`. Apple Silicon runtime findings are in the [runtime review](Benchmarks/APPLE-SILICON-RUNTIME-2026-09-06.md); current and deferred models are documented in the [ASR coverage report](Benchmarks/ASR-MODEL-COVERAGE-2026-09-06.md). Recent evidence includes [setup replay and delivery feedback](Benchmarks/BUILD-27-SETUP-FEEDBACK.md), [setup and model checks](Benchmarks/BUILD-26-SETUP-MODELS.md), [recording and history](Benchmarks/BUILD-23-RECORDING-HISTORY.md) and [audio-cue/no-speech checks](Benchmarks/BUILD-24-AUDIO-CUES.md).
 
 ## Toward a release
 
@@ -173,3 +173,5 @@ Model and runtime licenses apply independently. Sources and pinned revisions are
 **S1-mini by Superwhisper** includes an Apache-based license with an additional naming term; its pinned model download includes `LICENSE` and `NOTICE`. Review and ship the required runtime/model notices before distribution.
 
 Quibble itself is released under the [Apache License 2.0](LICENSE). Vendored third-party material keeps its own license; [NOTICE](NOTICE) lists each item and points to its license text and provenance.
+
+Quibble's interface owes a debt to [Superwhisper](https://superwhisper.com), which worked out much of what a good macOS dictation app looks like. [What it taught this design](Docs/References/Superwhisper/README.md) is written down rather than left implied.
