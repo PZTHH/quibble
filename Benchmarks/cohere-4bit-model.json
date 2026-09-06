@@ -1,0 +1,6 @@
+{
+  "name": "cohere-4bit",
+  "repository": "beshkenadze/cohere-transcribe-03-2026-mlx-4bit",
+  "revision": "104bc4391b5b1a12b040859793d7148525e1a08c",
+  "files": ["README.md", "config.json", "conversion_summary.json", "key_map.json", "model.safetensors", "preprocessor_config.json", "special_tokens_map.json", "tokenizer.model", "tokenizer_config.json"]
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "publisher": "Cohere Labs",
+    "profile": "https://huggingface.co/CohereLabs",
+    "asset": "App/Resources/ModelIcons.xcassets/ModelBrand-cohere.imageset/icon.png",
+    "source": "https://cdn-avatars.huggingface.co/v1/production/uploads/1678549441248-5e70f6048ce3c604d78fe133.png",
+    "sha256": "254d48df339ba25e3e499a79272037157ac4762fd40ba0119789d257d0593003",
+    "retrievedAt": "2026-09-05"
+  },
+  {
+    "publisher": "NVIDIA",
+    "profile": "https://huggingface.co/nvidia",
+    "asset": "App/Resources/ModelIcons.xcassets/ModelBrand-nvidia.imageset/icon.png",
+    "source": "https://cdn-avatars.huggingface.co/v1/production/uploads/65df9200dc3292a8983e5017/Vs5FPVCH-VZBipV3qKTuy.png",
+    "sha256": "75f85aa1b5c95694f9199ae163b0a42ccd45c8ef2870d7dc494c1733b869444d",
+    "retrievedAt": "2026-09-05"
+  },
+  {
+    "publisher": "Qwen",
+    "profile": "https://huggingface.co/Qwen",
+    "asset": "App/Resources/ModelIcons.xcassets/ModelBrand-qwen.imageset/icon.jpg",
+    "source": "https://cdn-avatars.huggingface.co/v1/production/uploads/6215ca5692c0ecfba9186921/hrRM50-6XcdWgg2AKpENG.jpeg",
+    "sha256": "0c74f4f564ec24d5fd552b63efd43a9a85214ab4f6c7951e53c0d4328e5967d0",
+    "retrievedAt": "2026-09-05"
+  },
+  {
+    "publisher": "OpenAI",
+    "profile": "https://huggingface.co/openai",
+    "asset": "App/Resources/ModelIcons.xcassets/ModelBrand-openai.imageset/icon.png",
+    "source": "https://cdn-avatars.huggingface.co/v1/production/uploads/68783facef79a05727260de3/UPX5RQxiPGA-ZbBmArIKq.png",
+    "sha256": "51767fd618f19941f3f2ae5a88c526ccc4ca874a0444226f09f6ab6da7346897",
+    "retrievedAt": "2026-09-05"
+  },
+  {
+    "publisher": "Superwhisper",
+    "profile": "https://huggingface.co/superwhisper",
+    "asset": "App/Resources/ModelIcons.xcassets/ModelBrand-superwhisper.imageset/icon.png",
+    "source": "https://cdn-avatars.huggingface.co/v1/production/uploads/637cefc1ca8c4cc8d0e7bff5/JXubA5zevq3aZJBTE95Qk.png",
+    "sha256": "384a01866d7cb23c4fb4c36e6123138d24afb02fee74914ac43e38d8dfec9d4f",
+    "retrievedAt": "2026-09-05"
+  },
+  {
+    "publisher": "Moonshine AI",
+    "profile": "https://huggingface.co/moonshine-ai",
+    "asset": "App/Resources/ModelIcons.xcassets/ModelBrand-moonshine.imageset/icon.png",
+    "source": "https://cdn-avatars.huggingface.co/v1/production/uploads/6509fc8d11afda55cae0b2e7/6tyQ-L7VxHMOSKIOff09A.png",
+    "sha256": "e04a25bf2fa3e9bfa4af002dd7ffeaf22b2782d22eb5f69acf97129009cac60f",
+    "retrievedAt": "2026-09-06",
+    "profileMetadataURL": "https://huggingface.co/api/organizations/moonshine-ai/overview"
+  },
+  {
+    "publisher": "IBM Granite",
+    "profile": "https://huggingface.co/ibm-granite",
+    "asset": "App/Resources/ModelIcons.xcassets/ModelBrand-granite.imageset/icon.png",
+    "source": "https://cdn-avatars.huggingface.co/v1/production/uploads/639bcaa2445b133a4e942436/CEW-OjXkRkDNmTxSu8Egh.png",
+    "sha256": "b4c42cc14b9475ef087b9f6b69d4a1187ea9ae9d2e5d99815fa273ae1297816f",
+    "retrievedAt": "2026-09-06",
+    "profileMetadataURL": "https://huggingface.co/api/organizations/ibm-granite/overview"
+  }
+]

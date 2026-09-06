@@ -1,0 +1,32 @@
+--- Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/CohereTranscribe/CohereTranscribe.swift
++++ Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/CohereTranscribe/CohereTranscribe.swift
+@@ -984,3 +984,29 @@
+         return model
+     }
+ }
++
++public extension CohereTranscribeModel {
++    /// Benchmark only: total log probability of each complete candidate, with shared acoustic prefill.
++    func probeTranscriptLikelihoods(audio: MLXArray, transcripts: [String]) -> [[Float]] {
++        let initial = encodeAndPrefill(audio: audio, generationParameters: STTGenerateParameters(maxTokens: 512, language: "en"))
++        guard let tokenizer else { return [] }
++        let eos = tokenizer.encode(text: "<|endoftext|>").first ?? 0
++        return transcripts.map { text in
++            let ids = tokenizer.encode(text: text) + [eos]
++            var cache = initial.cache, logits = initial.logits
++            var scores: [Float] = []
++            for (index, token) in ids.enumerated() {
++                let f = logits.asType(.float32)
++                let score = f[token] - logSumExp(f)
++                scores.append(score.item(Float.self))
++                if index + 1 == ids.count { break }
++                let next = decoder(inputIds: MLXArray([Int32(token)]).expandedDimensions(axis: 0),
++                    positions: MLXArray([Int32(initial.promptLength + index)]).expandedDimensions(axis: 0),
++                    encoderHiddenStates: initial.adapterOut, selfAttentionMask: nil, crossAttentionMask: nil, cache: cache)
++                cache = next.1
++                logits = lmHead(next.0[0, -1]); eval(logits)
++            }
++            return scores
++        }
++    }
++}

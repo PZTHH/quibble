@@ -1,0 +1,10 @@
+{
+  "kind": "synthetic smoke corpus",
+  "note": "Generate with the macOS say command. This does not establish accuracy on human speech, accents or noise.",
+  "cases": [
+    {"id": "short", "text": "Please send the revised document to Maya before Thursday afternoon."},
+    {"id": "correction", "text": "The meeting is on Tuesday, no, sorry, Thursday. Please tell Maya that the new version of Quibble is ready to test. Do not send the old report."},
+    {"id": "technical", "text": "We need to update the Swift package, check the API response, and preserve the PostgreSQL connection string. The maximum timeout is fifteen seconds. Do not change the bundle identifier. Please review the pull request before the next build."},
+    {"id": "long", "text": "Here are my notes for the next prototype. First, we need to measure how long it takes to transcribe a short recording. Second, we should compare the original words with the cleaned text, especially names and numbers. Third, the application should remember its permissions after an update. I said Tuesday earlier, but the meeting is actually on Thursday. Please keep that correction in the final message. The release number is zero point one, and the timeout should remain at fifteen seconds. We should not send the message automatically. Let the user review the result and make any final changes before sending it. Those are all the notes for today."}
+  ]
+}

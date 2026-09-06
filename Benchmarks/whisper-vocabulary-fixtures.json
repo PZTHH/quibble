@@ -1,0 +1,163 @@
+{
+  "words": [
+    "Siobhan",
+    "Saoirse",
+    "Niamh",
+    "Aisling",
+    "Caoimhe",
+    "Diksha",
+    "Superwhisper",
+    "Mae",
+    "Apple",
+    "Obsidian",
+    "QuickTime",
+    "PostgreSQL",
+    "Quibble"
+  ],
+  "cases": [
+    {
+      "name": "siobhan",
+      "spoken": "Please send the report to Shivawn.",
+      "expected": "Please send the report to Siobhan.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/siobhan.aiff",
+      "baselines": {
+        "cohere": "Please send the report to Shivan.",
+        "parakeet": "Please send the report to Shivon.",
+        "qwen": "Please send the report to Siobhan."
+      }
+    },
+    {
+      "name": "saoirse",
+      "spoken": "Sirsha will join us tomorrow.",
+      "expected": "Saoirse will join us tomorrow.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/saoirse.aiff",
+      "baselines": {
+        "cohere": "Sersha will join us tomorrow.",
+        "parakeet": "Sersha will join us tomorrow.",
+        "qwen": "Sorcha will join us tomorrow."
+      }
+    },
+    {
+      "name": "niamh",
+      "spoken": "I spoke with Neev about the design.",
+      "expected": "I spoke with Niamh about the design.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/niamh.aiff",
+      "baselines": {
+        "cohere": "I spoke with Neve about the design.",
+        "parakeet": "I spoke with Neve about the design.",
+        "qwen": "I spoke with Neve about the design."
+      }
+    },
+    {
+      "name": "aisling",
+      "spoken": "Please ask Ashling to review it.",
+      "expected": "Please ask Aisling to review it.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/aisling.aiff",
+      "baselines": {
+        "cohere": "Please ask Ashling to review it.",
+        "parakeet": "Please ask Ashling to review it.",
+        "qwen": "Please ask Ashling to review it."
+      }
+    },
+    {
+      "name": "caoimhe",
+      "spoken": "Call Keeva after lunch.",
+      "expected": "Call Caoimhe after lunch.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/caoimhe.aiff",
+      "baselines": {
+        "cohere": "Call Kiva after lunch.",
+        "parakeet": "Call Kiva after lunch.",
+        "qwen": "Call Kiva after lunch."
+      }
+    },
+    {
+      "name": "diksha",
+      "spoken": "Please send this to Deeksha.",
+      "expected": "Please send this to Diksha.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/diksha.aiff",
+      "baselines": {
+        "cohere": "Please send this to Diksha.",
+        "parakeet": "Please send this to Diksha.",
+        "qwen": "Please send this to Diksha."
+      }
+    },
+    {
+      "name": "vocabulary",
+      "spoken": "Please open super whisper.",
+      "expected": "Please open Superwhisper.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/vocabulary.aiff",
+      "baselines": {
+        "cohere": "Please open Super Whisper.",
+        "parakeet": "Please open Super Whisper.",
+        "qwen": "Please open Super Whisper."
+      }
+    },
+    {
+      "name": "negative-maya",
+      "spoken": "Please send the revised document to Maya before Thursday afternoon.",
+      "expected": "Please send the revised document to Maya before Thursday afternoon.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-maya.aiff",
+      "baselines": {
+        "cohere": "Please send the revised document to Maya before Thursday afternoon.",
+        "parakeet": "Please send the revised document to Maya before Thursday afternoon.",
+        "qwen": "Please send the revised document to Maya before Thursday afternoon."
+      }
+    },
+    {
+      "name": "negative-sean",
+      "spoken": "I spoke with Sean.",
+      "expected": "I spoke with Sean.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-sean.aiff",
+      "baselines": {
+        "cohere": "I spoke with Sean.",
+        "parakeet": "I spoke with Sean.",
+        "qwen": "I spoke with Sean."
+      }
+    },
+    {
+      "name": "negative-fruit",
+      "spoken": "I ate an apple after lunch.",
+      "expected": "I ate an apple after lunch.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-fruit.aiff",
+      "baselines": {
+        "cohere": "I ate an apple after lunch.",
+        "parakeet": "I ate an apple after lunch.",
+        "qwen": "I ate an apple after lunch."
+      }
+    },
+    {
+      "name": "negative-time",
+      "spoken": "We finished in quick time.",
+      "expected": "We finished in quick time.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-time.aiff",
+      "baselines": {
+        "cohere": "We finished in quick time.",
+        "parakeet": "We finished in quick time.",
+        "qwen": "We finished in quick time."
+      }
+    },
+    {
+      "name": "negative-may",
+      "spoken": "The weather may improve tomorrow.",
+      "expected": "The weather may improve tomorrow.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-may.aiff",
+      "baselines": {
+        "cohere": "The weather may improve tomorrow.",
+        "parakeet": "The weather may improve tomorrow.",
+        "qwen": "The weather may improve tomorrow."
+      }
+    },
+    {
+      "name": "negative-rock",
+      "spoken": "The obsidian rock was black.",
+      "expected": "The obsidian rock was black.",
+      "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-rock.aiff",
+      "baselines": {
+        "cohere": "The obsidian rock was black.",
+        "parakeet": "The obsidian rock was black.",
+        "qwen": "The obsidian rock was black."
+      }
+    }
+  ],
+  "note": "Synthetic Samantha voice using English phonetic spellings; not a human-name accuracy benchmark."
+}

@@ -1,0 +1,81 @@
+--- Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/Parakeet/ParakeetModel.swift
++++ Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/Parakeet/ParakeetModel.swift
+@@ -24,6 +24,10 @@
+     /// Compute dtype applied to encoder features and decoder LSTM state.
+     /// Defaults to `.bfloat16` (measured ~8% wall-clock speedup on batched decode
+     /// with ~0.2% word drift). Set to `.float32` via the factory method to fall back.
++    // BENCHMARK ONLY: nil starts a fresh utterance; nonblank tokens advance the tree.
++    public var probeVocabularyBias: ((Int?) -> MLXArray)?
++    private lazy var compiledBiasedTDTStep = makeCompiledTDTStep(
++        decoder: self.decoder, joint: self.joint, blankTokenId: self.blankTokenId, withBias: true)
+     public var computeDType: DType = .bfloat16
+ 
+     enum TDTDecoderImplementation: Sendable {
+@@ -378,7 +382,7 @@
+         )
+         eval(batchFeatures, lengths)
+ 
+-        switch tdtDecoderImplementation ?? .serial {
++        switch probeVocabularyBias == nil ? (tdtDecoderImplementation ?? .serial) : .serial {
+         case .serial:
+             return decodeTDTSerial(batchFeatures: batchFeatures, lengths: lengths, decoder: decoder, joint: joint)
+         case .hybrid:
+@@ -409,15 +413,16 @@
+             var state = makeInitialDecoderState(batchSize: 1, dtype: computeDType)
+             var currentToken = MLXArray(Int32(lastToken)).reshaped([1, 1]).asType(.int32)
+ 
++            var probeBias = probeVocabularyBias?(nil)
+             while t < maxLength {
+                 let frame = featureSeq[0..., t..<(t + 1), 0...]
+-
+-                let stepOutputs = compiledTDTStep([
+-                    frame,
+-                    currentToken,
+-                    state.hidden!,
+-                    state.cell!
+-                ])
++                let inputs = [frame, currentToken, state.hidden!, state.cell!]
++                let stepOutputs: [MLXArray]
++                if let probeBias {
++                    stepOutputs = compiledBiasedTDTStep(inputs + [probeBias])
++                } else {
++                    stepOutputs = compiledTDTStep(inputs)
++                }
+                 let decisions = stepOutputs[0]
+                 let hidden = stepOutputs[1]
+                 let cell = stepOutputs[2]
+@@ -447,6 +452,7 @@
+                 )
+ 
+                 if token != blankToken {
++                    probeBias = probeVocabularyBias?(token)
+                     lastToken = token
+                     state = (hidden: hidden, cell: cell)
+                     currentToken = MLXArray(Int32(lastToken)).reshaped([1, 1]).asType(.int32)
+@@ -894,7 +900,8 @@
+ private func makeCompiledTDTStep(
+     decoder: ParakeetPredictNetwork?,
+     joint: ParakeetJointNetwork?,
+-    blankTokenId: Int
++    blankTokenId: Int,
++    withBias: Bool = false
+ ) -> @Sendable ([MLXArray]) -> [MLXArray] {
+     guard let decoder, let joint else {
+         return { arrays in
+@@ -923,7 +930,15 @@
+         let jointOut = joint(feature, pred)
+         let tokenLogits = jointOut[0, 0, 0, ..<(blankTokenId + 1)]
+         let durationLogits = jointOut[0, 0, 0, (blankTokenId + 1)...]
+-        let predToken = tokenLogits.argMax(axis: -1).asType(.int32)
++        let unbiasedToken = tokenLogits.argMax(axis: -1).asType(.int32)
++        let predToken: MLXArray
++        if withBias {
++            let biased = (tokenLogits[..<blankTokenId].asType(.float32) + arrays[4]).argMax(axis: -1).asType(.int32)
++            // NeMo TDT fusion preserves the acoustic blank/nonblank decision.
++            predToken = MLX.where(unbiasedToken .== Int32(blankTokenId), unbiasedToken, biased)
++        } else {
++            predToken = unbiasedToken
++        }
+         let decision = durationLogits.argMax(axis: -1).asType(.int32)
+         let decisions = MLX.stacked([predToken, decision], axis: 0)
+         return [decisions, hiddenOut, cellOut]

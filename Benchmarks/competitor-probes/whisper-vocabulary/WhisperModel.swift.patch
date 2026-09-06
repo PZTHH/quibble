@@ -1,0 +1,36 @@
+--- Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/Whisper/WhisperModel.swift
++++ Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/Whisper/WhisperModel.swift
+@@ -11,6 +11,7 @@
+     @ModuleInfo(key: "model") var model: WhisperSubmodels
+ 
+     private var tokenizer: WhisperTokenizer?
++    public var probeInitialPrompt: String = ""
+ 
+     public init(config: WhisperConfig, generationConfig: WhisperGenerationConfig? = nil) {
+         self.config = config
+@@ -195,10 +196,12 @@
+         let encoderHidden = model.encoder(features)
+ 
+         var caches = (0..<config.decoderLayers).map { _ in WhisperLayerCache() }
+-        let promptIds = tokenizer.buildPromptTokens(
+-            language: generationParameters.language,
+-            task: "transcribe"
+-        )
++        let basePrompt = tokenizer.buildPromptTokens(language: generationParameters.language, task: "transcribe")
++        var promptIds = basePrompt
++        if !probeInitialPrompt.isEmpty, let previous = tokenizer.prevSotId {
++            let hintTokens = tokenizer.inner.encode(text: " " + probeInitialPrompt.trimmingCharacters(in: .whitespacesAndNewlines), addSpecialTokens: false)
++            promptIds = [previous] + Array(hintTokens.suffix(config.maxTargetPositions / 2 - 1)) + basePrompt
++        }
+ 
+         let promptArray = MLXArray(promptIds.map(Int32.init)).expandedDimensions(axis: 0)
+         var hidden = model.decoder(
+@@ -272,7 +275,7 @@
+         // The language token sits at prompt index 1 for multilingual models.
+         var language: String? = nil
+         if tokenizer.isMultilingual, promptIds.count > 1 {
+-            let langTokenId = promptIds[1]
++            let langTokenId = basePrompt[1]
+             for (code, id) in tokenizer.languageToId where id == langTokenId {
+                 language = code
+                 break

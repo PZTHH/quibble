@@ -1,0 +1,18 @@
+{
+  "name": "qwen3-asr-4bit",
+  "repository": "mlx-community/Qwen3-ASR-1.7B-4bit",
+  "revision": "78a389c776a5483b2d0d4ea5494e11012e0d6159",
+  "files": [
+    "README.md",
+    "chat_template.json",
+    "config.json",
+    "generation_config.json",
+    "merges.txt",
+    "model.safetensors",
+    "model.safetensors.index.json",
+    "preprocessor_config.json",
+    "tokenizer_config.json",
+    "vocab.json"
+  ],
+  "source": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B"
+}

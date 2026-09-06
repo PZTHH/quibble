@@ -1,0 +1,238 @@
+{
+  "words": [
+    "Sinead",
+    "Cillian",
+    "Aoife",
+    "R\u00f3is\u00edn",
+    "Eoin",
+    "Tadhg",
+    "Dearbhla",
+    "Donnacha",
+    "Caoimhe",
+    "Siobh\u00e1n",
+    "Aisling",
+    "Saoirse",
+    "Siobhan",
+    "Niamh",
+    "Mae"
+  ],
+  "cases": [
+    {
+      "name": "holdout-00",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-00.aiff",
+      "spoken": "Please send the draft to Shinade.",
+      "expected": "Please send the draft to Sinead.",
+      "baselines": {
+        "fixture": "Please send the draft to Shunade."
+      }
+    },
+    {
+      "name": "holdout-01",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-01.aiff",
+      "spoken": "Please send the draft to Killian.",
+      "expected": "Please send the draft to Cillian.",
+      "baselines": {
+        "fixture": "Please send the draft to Killian."
+      }
+    },
+    {
+      "name": "holdout-02",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-02.aiff",
+      "spoken": "Please send the draft to Eefa.",
+      "expected": "Please send the draft to Aoife.",
+      "baselines": {
+        "fixture": "Please send the draft to Eva."
+      }
+    },
+    {
+      "name": "holdout-03",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-03.aiff",
+      "spoken": "Please send the draft to Roisheen.",
+      "expected": "Please send the draft to R\u00f3is\u00edn.",
+      "baselines": {
+        "fixture": "Please send the draft to Roisheen."
+      }
+    },
+    {
+      "name": "holdout-04",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-04.aiff",
+      "spoken": "Please send the draft to Owen.",
+      "expected": "Please send the draft to Eoin.",
+      "baselines": {
+        "fixture": "Please send the draft to Owen."
+      }
+    },
+    {
+      "name": "holdout-05",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-05.aiff",
+      "spoken": "Please send the draft to Tige.",
+      "expected": "Please send the draft to Tadhg.",
+      "baselines": {
+        "fixture": "Please send the draft to Tie-g."
+      }
+    },
+    {
+      "name": "holdout-06",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-06.aiff",
+      "spoken": "Please send the draft to Dervla.",
+      "expected": "Please send the draft to Dearbhla.",
+      "baselines": {
+        "fixture": "Please send the draft to Dervla."
+      }
+    },
+    {
+      "name": "holdout-07",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-07.aiff",
+      "spoken": "Please send the draft to Dunaka.",
+      "expected": "Please send the draft to Donnacha.",
+      "baselines": {
+        "fixture": "Please send the draft to Donica."
+      }
+    },
+    {
+      "name": "holdout-08",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-08.aiff",
+      "spoken": "Please send the draft to Keeva.",
+      "expected": "Please send the draft to Caoimhe.",
+      "baselines": {
+        "fixture": "Please send the draft to Keeva."
+      }
+    },
+    {
+      "name": "holdout-09",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-09.aiff",
+      "spoken": "Please send the draft to Shivawn.",
+      "expected": "Please send the draft to Siobh\u00e1n.",
+      "baselines": {
+        "fixture": "Please send the draft to Shivon."
+      }
+    },
+    {
+      "name": "holdout-10",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-10.aiff",
+      "spoken": "Please send the draft to Ashling.",
+      "expected": "Please send the draft to Aisling.",
+      "baselines": {
+        "fixture": "Please send the draft to Ashling."
+      }
+    },
+    {
+      "name": "holdout-11",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-11.aiff",
+      "spoken": "Please send the draft to Sirsha.",
+      "expected": "Please send the draft to Saoirse.",
+      "baselines": {
+        "fixture": "Please send the draft to Searsha."
+      }
+    },
+    {
+      "name": "holdout-12",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-12.aiff",
+      "spoken": "I spoke with Sean about lunch.",
+      "expected": "I spoke with Sean about lunch.",
+      "baselines": {
+        "fixture": "I spoke with Sean about lunch."
+      }
+    },
+    {
+      "name": "holdout-13",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-13.aiff",
+      "spoken": "Please send this to Maya.",
+      "expected": "Please send this to Maya.",
+      "baselines": {
+        "fixture": "Please send this to Maya."
+      }
+    },
+    {
+      "name": "holdout-14",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-14.aiff",
+      "spoken": "Call Susan this afternoon.",
+      "expected": "Call Susan this afternoon.",
+      "baselines": {
+        "fixture": "Call Susan this afternoon."
+      }
+    },
+    {
+      "name": "holdout-15",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-15.aiff",
+      "spoken": "The scene looked beautiful.",
+      "expected": "The scene looked beautiful.",
+      "baselines": {
+        "fixture": "The scene looked beautiful."
+      }
+    },
+    {
+      "name": "holdout-16",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-16.aiff",
+      "spoken": "Please leave the car here.",
+      "expected": "Please leave the car here.",
+      "baselines": {
+        "fixture": "Please leave the car here."
+      }
+    },
+    {
+      "name": "holdout-17",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-17.aiff",
+      "spoken": "We should save it now.",
+      "expected": "We should save it now.",
+      "baselines": {
+        "fixture": "We should save it now."
+      }
+    },
+    {
+      "name": "holdout-18",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-18.aiff",
+      "spoken": "A short shower arrived.",
+      "expected": "A short shower arrived.",
+      "baselines": {
+        "fixture": "A short shower arrived."
+      }
+    },
+    {
+      "name": "holdout-19",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-19.aiff",
+      "spoken": "They may join us on Friday.",
+      "expected": "They may join us on Friday.",
+      "baselines": {
+        "fixture": "They may join us on Friday."
+      }
+    },
+    {
+      "name": "holdout-20",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-20.aiff",
+      "spoken": "The ash was still warm.",
+      "expected": "The ash was still warm.",
+      "baselines": {
+        "fixture": "The ash was still warm."
+      }
+    },
+    {
+      "name": "holdout-21",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-21.aiff",
+      "spoken": "I need a new name for this.",
+      "expected": "I need a new name for this.",
+      "baselines": {
+        "fixture": "I need a new name for this."
+      }
+    },
+    {
+      "name": "holdout-22",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-22.aiff",
+      "spoken": "Ask Steve about the proposal.",
+      "expected": "Ask Steve about the proposal.",
+      "baselines": {
+        "fixture": "Ask Steve about the proposal."
+      }
+    },
+    {
+      "name": "holdout-23",
+      "audio": "/Users/march/Projects/quibble/.build/vocabulary-holdout-audio/holdout-23.aiff",
+      "spoken": "We need more time for the project.",
+      "expected": "We need more time for the project.",
+      "baselines": {
+        "fixture": "We need more time for the project."
+      }
+    }
+  ],
+  "note": "Synthetic pronunciation-controlled holdout; fixture baselines are text controls, not recognizer outputs."
+}

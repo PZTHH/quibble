@@ -1,0 +1,85 @@
+{
+  "words": [
+    "Siobhan",
+    "Saoirse",
+    "Niamh",
+    "Aisling",
+    "Caoimhe",
+    "Diksha",
+    "Superwhisper",
+    "Mae",
+    "Apple",
+    "Obsidian",
+    "QuickTime",
+    "PostgreSQL",
+    "Quibble"
+  ],
+  "cases": [
+    {
+      "name": "siobhan",
+      "spoken": "Please send the report to Shivawn.",
+      "expected": "Please send the report to Siobhan."
+    },
+    {
+      "name": "saoirse",
+      "spoken": "Sirsha will join us tomorrow.",
+      "expected": "Saoirse will join us tomorrow."
+    },
+    {
+      "name": "niamh",
+      "spoken": "I spoke with Neev about the design.",
+      "expected": "I spoke with Niamh about the design."
+    },
+    {
+      "name": "aisling",
+      "spoken": "Please ask Ashling to review it.",
+      "expected": "Please ask Aisling to review it."
+    },
+    {
+      "name": "caoimhe",
+      "spoken": "Call Keeva after lunch.",
+      "expected": "Call Caoimhe after lunch."
+    },
+    {
+      "name": "diksha",
+      "spoken": "Please send this to Deeksha.",
+      "expected": "Please send this to Diksha."
+    },
+    {
+      "name": "vocabulary",
+      "spoken": "Please open super whisper.",
+      "expected": "Please open Superwhisper."
+    },
+    {
+      "name": "negative-maya",
+      "spoken": "Please send the revised document to Maya before Thursday afternoon.",
+      "expected": "Please send the revised document to Maya before Thursday afternoon."
+    },
+    {
+      "name": "negative-sean",
+      "spoken": "I spoke with Sean.",
+      "expected": "I spoke with Sean."
+    },
+    {
+      "name": "negative-fruit",
+      "spoken": "I ate an apple after lunch.",
+      "expected": "I ate an apple after lunch."
+    },
+    {
+      "name": "negative-time",
+      "spoken": "We finished in quick time.",
+      "expected": "We finished in quick time."
+    },
+    {
+      "name": "negative-may",
+      "spoken": "The weather may improve tomorrow.",
+      "expected": "The weather may improve tomorrow."
+    },
+    {
+      "name": "negative-rock",
+      "spoken": "The obsidian rock was black.",
+      "expected": "The obsidian rock was black."
+    }
+  ],
+  "note": "Synthetic Samantha voice using English phonetic spellings; not a human-name accuracy benchmark."
+}

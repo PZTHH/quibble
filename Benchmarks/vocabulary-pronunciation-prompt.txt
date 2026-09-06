@@ -1,0 +1,3 @@
+Give the usual pronunciation of the supplied name or word, as it would be spoken in English. For a name from another language, use its established name pronunciation rather than English spelling rules. Return only its IPA pronunciation, without slashes or explanation.
+---USER---
+{{transcript}}

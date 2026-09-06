@@ -1,0 +1,95 @@
+# Build products and dependency caches, including nested Swift packages.
+.build/
+.swiftpm/
+DerivedData/
+build/
+DerivedDataCache/
+ModuleCache.noindex/
+Index.noindex/
+*.xcarchive/
+*.xcresult/
+*.dSYM/
+*.app/
+*.ipa
+*.dmg
+*.pkg
+*.o
+*.a
+*.dylib
+*.swiftmodule
+*.swiftdoc
+*.swiftsourceinfo
+
+# Keep source projects, shared schemes, Package.resolved, and model manifests.
+# Ignore tool output at any depth, including standalone experiments.
+.cache/
+node_modules/
+target/
+.gradle/
+dist/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+*.profraw
+*.profdata
+*.log
+
+# Downloaded weights and local audio. Keep test audio under Tests/ visible.
+/Models/
+/BenchmarkAudio/
+/Recordings/
+/Exports/
+/SupportExports/
+
+# Generated measurements can contain transcripts, prompts, and local paths.
+# Keep authored fixtures, source probes, licenses, and summary notes visible.
+/Benchmarks/results/*
+!/Benchmarks/results/SUMMARY.md
+/Benchmarks/quantization/
+/Benchmarks/live-textedit.json
+/Benchmarks/update-identity.json
+/Benchmarks/competitor-probes/*-results.json
+/Benchmarks/competitor-probes/**/*.swift.original
+/Benchmarks/competitor-probes/**/*.swift.modified
+/Benchmarks/competitor-probes/spellmapper/hf-metadata.json
+
+# User-supplied competitor screenshots are local design references.
+/Docs/References/Superwhisper/*.png
+
+# Local configuration and signing secrets; committed examples stay visible.
+.env
+.env.*
+!.env.example
+!.env.template
+*.local.xcconfig
+*.p12
+*.pfx
+*.key
+*.pem
+*.mobileprovision
+*.provisionprofile
+*.keychain
+*.keychain-db
+
+# Editor, Python, and macOS state.
+*.xcuserstate
+xcuserdata/
+.DS_Store
+._*
+.AppleDouble/
+.LSOverride
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.idea/
+*.swp
+*.swo
+*~

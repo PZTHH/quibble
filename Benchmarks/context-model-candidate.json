@@ -1,0 +1,25 @@
+{
+  "name": "qwen3-4b-instruct-4bit",
+  "repository": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+  "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+  "files": [
+    "README.md",
+    "added_tokens.json",
+    "chat_template.jinja",
+    "config.json",
+    "generation_config.json",
+    "merges.txt",
+    "model.safetensors",
+    "model.safetensors.index.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "vocab.json"
+  ],
+  "source": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+  "retrieved": "2026-09-05",
+  "expectedDownloadBytes": 2278970666,
+  "expectedWeightsBytes": 2263022417,
+  "approximateSize": "2.28 GB download; runtime memory is higher and unmeasured",
+  "purpose": "Optional application-context and custom-instruction refinement; candidate pending local evaluation"
+}

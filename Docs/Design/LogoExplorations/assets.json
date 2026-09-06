@@ -1,0 +1,43 @@
+{
+  "generated": "2026-09-06",
+  "tool": "built-in image generation",
+  "status": "review concepts, not final vector masters",
+  "assets": [
+    {
+      "file": "01-open-q.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "2a11d34a30a7bd80447397c96f66381365ff53d87afab89bfaa6bd6047d790a9"
+    },
+    {
+      "file": "02-quotation-duet.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "8f6939d0943426cef7bc76a312cf5eb60aae5659ded97bf2da60e3c6036d3696"
+    },
+    {
+      "file": "03-voice-stroke.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "d2c7ef6983f2b3345788b9c7b6a7807ced56ddf2814cfd149db4659539d3d096"
+    }
+  ]
+}

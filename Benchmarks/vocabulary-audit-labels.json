@@ -1,0 +1,184 @@
+[
+  {
+    "group": "main",
+    "index": 0,
+    "heard": "Shivon",
+    "target": "Siobhan",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 1,
+    "heard": "Searsha",
+    "target": "Saoirse",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 2,
+    "heard": "Neve",
+    "target": "Niamh",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 3,
+    "heard": "super whisper",
+    "target": "Superwhisper",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 4,
+    "heard": "Ashling",
+    "target": "Aisling",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 5,
+    "heard": "Keeva",
+    "target": "Caoimhe",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 6,
+    "heard": "May",
+    "target": "Mae",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 9,
+    "heard": "apple",
+    "target": "Apple",
+    "expected": "KEEP"
+  },
+  {
+    "group": "main",
+    "index": 10,
+    "heard": "obsidian",
+    "target": "Obsidian",
+    "expected": "KEEP"
+  },
+  {
+    "group": "main",
+    "index": 16,
+    "heard": "quick time",
+    "target": "QuickTime",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "main",
+    "index": 17,
+    "heard": "postgress",
+    "target": "PostgreSQL",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 0,
+    "heard": "Shunade",
+    "target": "Sinead",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 1,
+    "heard": "Killian",
+    "target": "Cillian",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 2,
+    "heard": "Eva",
+    "target": "Aoife",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 3,
+    "heard": "Roisheen",
+    "target": "R\u00f3is\u00edn",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 4,
+    "heard": "Owen",
+    "target": "Eoin",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 5,
+    "heard": "Tie-g",
+    "target": "Tadhg",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 6,
+    "heard": "Dervla",
+    "target": "Dearbhla",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 7,
+    "heard": "Donica",
+    "target": "Donnacha",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 8,
+    "heard": "Keeva",
+    "target": "Caoimhe",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 9,
+    "heard": "Shivon",
+    "target": "Siobh\u00e1n",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 10,
+    "heard": "Ashling",
+    "target": "Aisling",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 11,
+    "heard": "Searsha",
+    "target": "Saoirse",
+    "expected": "ACCEPT"
+  },
+  {
+    "group": "holdout",
+    "index": 14,
+    "heard": "Susan",
+    "target": "Saoirse",
+    "expected": "KEEP"
+  },
+  {
+    "group": "holdout",
+    "index": 16,
+    "heard": "car",
+    "target": "Caoimhe",
+    "expected": "KEEP"
+  },
+  {
+    "group": "holdout",
+    "index": 20,
+    "heard": "ash",
+    "target": "Aisling",
+    "expected": "KEEP"
+  }
+]

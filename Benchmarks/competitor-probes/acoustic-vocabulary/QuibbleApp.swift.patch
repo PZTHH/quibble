@@ -1,0 +1,14 @@
+--- App/QuibbleApp.swift
++++ App/QuibbleApp.swift
+@@ -5,6 +5,11 @@
+ enum QuibbleEntry {
+     @MainActor static func main() async {
+         let args = CommandLine.arguments
++        if args.contains("--acoustic-vocabulary-fixtures") {
++            do { try await VocabularyBenchmark.runAcoustic(Array(args.dropFirst())) }
++            catch { FileHandle.standardError.write(Data("Acoustic benchmark failed: \(error)\n".utf8)); exit(1) }
++            return
++        }
+         if args.contains("--s1-vocabulary-fixtures") {
+             do { try await VocabularyBenchmark.runS1Prefixes(Array(args.dropFirst())) }
+             catch { FileHandle.standardError.write(Data("S1 vocabulary benchmark failed: \(error.localizedDescription)\n".utf8)); exit(1) }

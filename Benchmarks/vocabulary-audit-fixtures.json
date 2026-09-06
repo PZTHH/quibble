@@ -1,0 +1,158 @@
+[
+  {
+    "text": "{\"transcript\": \"Please send the report to Shivon.\", \"original_expression\": \"Shivon\", \"proposed_spelling\": \"Siobhan\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Searsha will join us tomorrow.\", \"original_expression\": \"Searsha\", \"proposed_spelling\": \"Saoirse\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"I spoke with Neve about the design.\", \"original_expression\": \"Neve\", \"proposed_spelling\": \"Niamh\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please open super whisper.\", \"original_expression\": \"super whisper\", \"proposed_spelling\": \"Superwhisper\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please ask Ashling to review it.\", \"original_expression\": \"Ashling\", \"proposed_spelling\": \"Aisling\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Call Keeva after lunch.\", \"original_expression\": \"Keeva\", \"proposed_spelling\": \"Caoimhe\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send this to May.\", \"original_expression\": \"May\", \"proposed_spelling\": \"Mae\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"I ate an apple after lunch.\", \"original_expression\": \"apple\", \"proposed_spelling\": \"Apple\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "KEEP"
+  },
+  {
+    "text": "{\"transcript\": \"The obsidian rock was black.\", \"original_expression\": \"obsidian\", \"proposed_spelling\": \"Obsidian\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "KEEP"
+  },
+  {
+    "text": "{\"transcript\": \"Please open quick time player.\", \"original_expression\": \"quick time\", \"proposed_spelling\": \"QuickTime\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Use postgress for our database.\", \"original_expression\": \"postgress\", \"proposed_spelling\": \"PostgreSQL\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Shunade.\", \"original_expression\": \"Shunade\", \"proposed_spelling\": \"Sinead\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Killian.\", \"original_expression\": \"Killian\", \"proposed_spelling\": \"Cillian\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Eva.\", \"original_expression\": \"Eva\", \"proposed_spelling\": \"Aoife\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Roisheen.\", \"original_expression\": \"Roisheen\", \"proposed_spelling\": \"R\\u00f3is\\u00edn\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Owen.\", \"original_expression\": \"Owen\", \"proposed_spelling\": \"Eoin\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Tie-g.\", \"original_expression\": \"Tie-g\", \"proposed_spelling\": \"Tadhg\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Dervla.\", \"original_expression\": \"Dervla\", \"proposed_spelling\": \"Dearbhla\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Donica.\", \"original_expression\": \"Donica\", \"proposed_spelling\": \"Donnacha\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Keeva.\", \"original_expression\": \"Keeva\", \"proposed_spelling\": \"Caoimhe\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Shivon.\", \"original_expression\": \"Shivon\", \"proposed_spelling\": \"Siobh\\u00e1n\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Ashling.\", \"original_expression\": \"Ashling\", \"proposed_spelling\": \"Aisling\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Please send the draft to Searsha.\", \"original_expression\": \"Searsha\", \"proposed_spelling\": \"Saoirse\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ACCEPT"
+  },
+  {
+    "text": "{\"transcript\": \"Call Susan this afternoon.\", \"original_expression\": \"Susan\", \"proposed_spelling\": \"Saoirse\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "KEEP"
+  },
+  {
+    "text": "{\"transcript\": \"Please leave the car here.\", \"original_expression\": \"car\", \"proposed_spelling\": \"Caoimhe\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "KEEP"
+  },
+  {
+    "text": "{\"transcript\": \"The ash was still warm.\", \"original_expression\": \"ash\", \"proposed_spelling\": \"Aisling\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "KEEP"
+  }
+]

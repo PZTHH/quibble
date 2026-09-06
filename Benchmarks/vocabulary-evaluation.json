@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "8dbb698c-a232-4a86-a438-321a20e95217",
+      "preferred": "Superwhisper",
+      "aliases": [
+        "super whisper",
+        "super whisker"
+      ],
+      "enabled": true,
+      "correctionsEnabled": true
+    },
+    {
+      "id": "7860b28c-9702-43f3-8abd-c623cb4094b4",
+      "preferred": "Quibble",
+      "aliases": [
+        "quible"
+      ],
+      "enabled": true,
+      "correctionsEnabled": true
+    },
+    {
+      "id": "389898d3-3c36-4812-afb6-0c70fbf3d5cf",
+      "preferred": "PostgreSQL",
+      "aliases": [
+        "postgre sql",
+        "postgress"
+      ],
+      "enabled": true,
+      "correctionsEnabled": true
+    }
+  ]
+}

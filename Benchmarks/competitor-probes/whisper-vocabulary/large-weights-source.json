@@ -1,0 +1,36 @@
+{
+  "id": "mlx-community/whisper-large-v3-4bit",
+  "sha": "d179def5a85bbcc230fae176f7bd71dd57cb8f45",
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "e3badef120553bb19921dffbfaadf5c300fc5ea7",
+      "size": 813
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "f09cd6d2c30c6c5c41134031e7c36bd44aaad468",
+      "size": 342
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "c1cee8fe570b8fa9f1a568ee1b2fb6fcadb2e456",
+      "size": 877691017,
+      "lfs": {
+        "sha256": "050bab6bb8b187a7986235f5729d0f441044bbe8e16bce81aa612c0080fc8a13",
+        "size": 877691017,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "multilingual.tiktoken",
+      "blobId": "a4edf0b719c10d28cd83f8c294449f99ff5d5dc0",
+      "size": 816730
+    }
+  ]
+}

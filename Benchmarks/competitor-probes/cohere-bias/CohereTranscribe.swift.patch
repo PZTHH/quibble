@@ -1,0 +1,24 @@
+--- Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/CohereTranscribe/CohereTranscribe.swift
++++ Inference/.build/checkouts/mlx-audio-swift/Sources/MLXAudioSTT/Models/CohereTranscribe/CohereTranscribe.swift
+@@ -285,6 +285,7 @@
+     @ModuleInfo(key: "lm_head") var lmHead: Linear
+ 
+     private var tokenizer: CohereTranscribeTokenizer?
++    public var probeVocabularyBias: ((Int?) -> MLXArray)?
+ 
+     public var defaultGenerationParameters: STTGenerateParameters {
+         STTGenerateParameters(
+@@ -423,9 +424,12 @@
+             requestedMaxTokens: generationParameters.maxTokens
+         )
+ 
++        var probeBias = probeVocabularyBias?(nil)
+         for pos in context.promptLength..<(context.promptLength + maxGenerationTokens) {
+-            let token = sample(logits: context.logits, temperature: generationParameters.temperature)
++            let logits = probeBias.map { context.logits.asType(.float32) + $0 } ?? context.logits
++            let token = sample(logits: logits, temperature: generationParameters.temperature)
+             generated.append(token)
++            probeBias = probeVocabularyBias?(token)
+ 
+             if token == eosTokenId {
+                 break

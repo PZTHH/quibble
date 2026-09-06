@@ -1,0 +1,1398 @@
+{
+  "retrieved": "2026-09-06",
+  "models": [
+    {
+      "name": "cohere-4bit",
+      "repository": "beshkenadze/cohere-transcribe-03-2026-mlx-4bit",
+      "revision": "104bc4391b5b1a12b040859793d7148525e1a08c",
+      "files": [
+        "README.md",
+        "config.json",
+        "conversion_summary.json",
+        "key_map.json",
+        "model.safetensors",
+        "preprocessor_config.json",
+        "special_tokens_map.json",
+        "tokenizer.model",
+        "tokenizer_config.json"
+      ],
+      "source": "https://huggingface.co/CohereLabs/cohere-transcribe-03-2026",
+      "title": "Cohere Transcribe",
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "gigabytes": 1.51,
+      "detail": "Strong accuracy with a smaller memory footprint.",
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "Apache-2.0; see model source",
+      "validation": "Tested in Quibble\u2019s existing synthetic fixtures; not a general accuracy guarantee.",
+      "parameters": 2000000000,
+      "familyID": "cohere",
+      "quantizationBits": 4,
+      "benchmarkModelID": "cohere-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": true
+    },
+    {
+      "name": "cohere",
+      "repository": "beshkenadze/cohere-transcribe-03-2026-mlx-fp16",
+      "revision": "06bbe0d853a93cbbf7c1f40cffccd4c5481459ef",
+      "source": "https://huggingface.co/CohereLabs/cohere-transcribe-03-2026",
+      "files": [
+        "config.json",
+        "model.safetensors",
+        "preprocessor_config.json",
+        "special_tokens_map.json",
+        "tokenizer.model",
+        "tokenizer_config.json",
+        "README.md",
+        "conversion_summary.json"
+      ],
+      "title": "Cohere Transcribe",
+      "category": "Speech recognition",
+      "variant": "FP16 \u00b7 Full precision",
+      "gigabytes": 4.14,
+      "detail": "Full precision option for quality comparisons. Uses more memory.",
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "Apache-2.0; see model source",
+      "validation": "Tested in Quibble\u2019s existing synthetic fixtures; not a general accuracy guarantee.",
+      "parameters": 2000000000,
+      "familyID": "cohere",
+      "quantizationBits": null,
+      "benchmarkModelID": "cohere-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": false
+    },
+    {
+      "name": "parakeet",
+      "repository": "mlx-community/parakeet-tdt-0.6b-v3",
+      "revision": "ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15",
+      "source": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "tokenizer.model",
+        "tokenizer.vocab",
+        "vocab.txt"
+      ],
+      "title": "Parakeet v3",
+      "category": "Speech recognition",
+      "variant": "FP32",
+      "gigabytes": 2.52,
+      "detail": "Multilingual TDT recognition with aligned sentence timing.",
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "CC-BY-4.0; NVIDIA model with community conversion",
+      "validation": "Tested in Quibble\u2019s existing synthetic fixtures; not a general accuracy guarantee.",
+      "parameters": 600000000,
+      "familyID": "parakeet-v3",
+      "quantizationBits": null,
+      "benchmarkModelID": "parakeet",
+      "artifactSource": "conversion",
+      "smokeTested": false
+    },
+    {
+      "name": "qwen3-asr-4bit",
+      "repository": "mlx-community/Qwen3-ASR-1.7B-4bit",
+      "revision": "78a389c776a5483b2d0d4ea5494e11012e0d6159",
+      "files": [
+        "README.md",
+        "chat_template.json",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "source": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B",
+      "title": "Qwen3 ASR",
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "gigabytes": 1.61,
+      "detail": "Compact speech recognition. Uses the shared audio helper for personal vocabulary.",
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "Apache-2.0; see model source",
+      "validation": "Tested in Quibble\u2019s existing synthetic fixtures; not a general accuracy guarantee.",
+      "parameters": 1700000000,
+      "familyID": "qwen3-asr-17b",
+      "quantizationBits": 4,
+      "benchmarkModelID": "qwen3-asr-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": true
+    },
+    {
+      "name": "s1-mini",
+      "repository": "superwhisper/s1-mini",
+      "revision": "88f6b15896c73bbb13a3b596e0afe8ea0d5150b4",
+      "source": "https://huggingface.co/superwhisper/s1-mini",
+      "files": [
+        "LICENSE",
+        "NOTICE",
+        "README.md",
+        "chat_template.jinja",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "title": "S1-mini",
+      "category": "Text refinement",
+      "variant": "Superwhisper \u00b7 Basic cleanup",
+      "gigabytes": 1.51,
+      "detail": "Fast spelling, punctuation, and basic formatting.",
+      "languages": "English cleanup",
+      "license": "See pinned model card and included notices",
+      "validation": "Tested in Quibble\u2019s existing synthetic fixtures; not a general accuracy guarantee.",
+      "parameters": null,
+      "artifactSource": "publisher"
+    },
+    {
+      "name": "qwen3-4b-instruct-4bit",
+      "repository": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+      "files": [
+        "README.md",
+        "added_tokens.json",
+        "chat_template.jinja",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "source": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+      "retrieved": "2026-09-05",
+      "expectedDownloadBytes": 2278970666,
+      "expectedWeightsBytes": 2263022417,
+      "approximateSize": "2.28 GB download; runtime memory is higher and unmeasured",
+      "purpose": "Optional application-context and custom-instruction refinement; candidate pending local evaluation",
+      "title": "Qwen3 4B Instruct",
+      "category": "Text refinement",
+      "variant": "4-bit \u00b7 Custom prompts",
+      "gigabytes": 2.28,
+      "detail": "Instruction-following model for custom workflow steps. No application context is supplied.",
+      "parameters": 4000000000,
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "Apache-2.0; see model source",
+      "validation": "Offline custom-workflow, reordered-step, and bullet-formatting checks passed. Prompt-specific testing remains necessary.",
+      "artifactSource": "conversion"
+    },
+    {
+      "name": "whisper-turbo-vocabulary-4bit",
+      "repository": "mlx-community/whisper-large-v3-turbo-4bit",
+      "revision": "0f058d38170d183f9fdee07908f5b515d91793a8",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        }
+      },
+      "title": "Whisper Turbo",
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "gigabytes": 0.4681,
+      "detail": "Use as a speech model or as the shared vocabulary helper. Both roles reuse the same download.",
+      "source": "https://huggingface.co/openai/whisper-large-v3-turbo",
+      "expectedDownloadBytes": 468081051,
+      "expectedWeightsBytes": 463462982,
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Experimental. Offline primary-ASR and shared-vocabulary smoke tests passed on two synthetic clips. Accuracy across voices and languages is not established.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 809000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "familyID": "whisper-turbo",
+      "quantizationBits": 4,
+      "benchmarkModelID": "whisper-turbo-vocabulary-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": true
+    },
+    {
+      "name": "whisper-base-4bit",
+      "title": "Whisper Base",
+      "repository": "mlx-community/whisper-base-4bit",
+      "revision": "50e8af4ebba739430129a6ab975a9b368a9a2fc4",
+      "source": "https://huggingface.co/openai/whisper-base",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        }
+      },
+      "fileBytes": {
+        "README.md": 780,
+        "config.json": 335,
+        "model.safetensors": 42215979,
+        "added_tokens.json": 34604,
+        "generation_config.json": 3807,
+        "merges.txt": 493869,
+        "normalizer.json": 52666,
+        "special_tokens_map.json": 2194,
+        "tokenizer.json": 2480466,
+        "tokenizer_config.json": 282683,
+        "vocab.json": 835550
+      },
+      "expectedDownloadBytes": 46402933,
+      "expectedWeightsBytes": 42215979,
+      "gigabytes": 0.0464,
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Experimental. Offline primary-ASR and shared-vocabulary smoke tests passed on two synthetic clips. Accuracy across voices and languages is not established.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 74000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "detail": "Smallest download. A useful speed and resource baseline; expect weaker recognition of difficult speech.",
+      "familyID": "whisper-base",
+      "quantizationBits": 4,
+      "benchmarkModelID": "whisper-base-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": true
+    },
+    {
+      "name": "whisper-small-4bit",
+      "title": "Whisper Small",
+      "repository": "mlx-community/whisper-small-4bit",
+      "revision": "1ac90abbb1b2f53863bfd2a483a3c31d792c3e5b",
+      "source": "https://huggingface.co/openai/whisper-small",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        }
+      },
+      "fileBytes": {
+        "README.md": 785,
+        "config.json": 339,
+        "model.safetensors": 139111057,
+        "added_tokens.json": 34604,
+        "generation_config.json": 3868,
+        "merges.txt": 493869,
+        "normalizer.json": 52666,
+        "special_tokens_map.json": 2194,
+        "tokenizer.json": 2480466,
+        "tokenizer_config.json": 282683,
+        "vocab.json": 835550
+      },
+      "expectedDownloadBytes": 143298081,
+      "expectedWeightsBytes": 139111057,
+      "gigabytes": 0.1433,
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Experimental. Offline primary-ASR and shared-vocabulary smoke tests passed on two synthetic clips. Accuracy across voices and languages is not established.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 244000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "detail": "A compact Whisper option between Base and the larger models.",
+      "familyID": "whisper-small",
+      "quantizationBits": 4,
+      "benchmarkModelID": "whisper-small-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": true
+    },
+    {
+      "name": "whisper-large-vocabulary-4bit",
+      "title": "Whisper Large v3",
+      "repository": "mlx-community/whisper-large-v3-4bit",
+      "revision": "d179def5a85bbcc230fae176f7bd71dd57cb8f45",
+      "source": "https://huggingface.co/openai/whisper-large-v3",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        }
+      },
+      "fileBytes": {
+        "README.md": 813,
+        "config.json": 342,
+        "model.safetensors": 877691017,
+        "added_tokens.json": 34648,
+        "generation_config.json": 3903,
+        "merges.txt": 493869,
+        "normalizer.json": 52666,
+        "special_tokens_map.json": 2072,
+        "tokenizer.json": 2480617,
+        "tokenizer_config.json": 282843,
+        "vocab.json": 1036558
+      },
+      "expectedDownloadBytes": 882079348,
+      "expectedWeightsBytes": 877691017,
+      "gigabytes": 0.8821,
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Experimental. Offline primary-ASR and shared-vocabulary smoke tests passed on two synthetic clips. Accuracy across voices and languages is not established.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 1550000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "detail": "Full-size Whisper v3 with 4-bit weights. Compare against Turbo on your own recordings.",
+      "familyID": "whisper-large-v3",
+      "quantizationBits": 4,
+      "benchmarkModelID": "whisper-large-vocabulary-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": true
+    },
+    {
+      "name": "qwen3-asr-06b-4bit",
+      "title": "Qwen3 ASR 0.6B",
+      "repository": "mlx-community/Qwen3-ASR-0.6B-4bit",
+      "revision": "313d850181767edf09f00a9c289becca70e58cd0",
+      "source": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B",
+      "files": [
+        "README.md",
+        "chat_template.json",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "fileBytes": {
+        "README.md": 1008,
+        "chat_template.json": 1161,
+        "config.json": 7187,
+        "generation_config.json": 142,
+        "merges.txt": 1671853,
+        "model.safetensors": 708236945,
+        "model.safetensors.index.json": 71814,
+        "preprocessor_config.json": 330,
+        "tokenizer_config.json": 12487,
+        "vocab.json": 2776833
+      },
+      "expectedDownloadBytes": 712779760,
+      "expectedWeightsBytes": 708236945,
+      "gigabytes": 0.7128,
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "runtime": "Qwen3ASRModel",
+      "validation": "Experimental. Offline speech and shared-vocabulary smoke tests passed on two synthetic clips; broader accuracy is unmeasured.",
+      "languages": "Chinese, English, Cantonese, Arabic, German, French, Spanish, Portuguese, Indonesian, Italian, Korean, Russian, Thai, Vietnamese, Japanese, Turkish, Hindi, Malay, Dutch, Swedish, Danish, Finnish, Polish, Czech, Filipino, Persian, Greek, Romanian, Hungarian, Macedonian",
+      "parameters": 600000000,
+      "license": "Apache-2.0",
+      "inferenceNotes": "Greedy ASR; temperature accepted but ineffective",
+      "detail": "Smaller Qwen speech model for testing the quality/resource trade-off.",
+      "familyID": "qwen3-asr-06b",
+      "quantizationBits": 4,
+      "benchmarkModelID": "qwen3-asr-06b-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": true
+    },
+    {
+      "name": "qwen3-0.6b-4bit",
+      "title": "Qwen3 0.6B",
+      "repository": "mlx-community/Qwen3-0.6B-4bit",
+      "revision": "73e3e38d981303bc594367cd910ea6eb48349da8",
+      "source": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "files": [
+        "README.md",
+        "added_tokens.json",
+        "config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "fileBytes": {
+        "README.md": 873,
+        "added_tokens.json": 707,
+        "config.json": 937,
+        "merges.txt": 1671853,
+        "model.safetensors": 335450584,
+        "model.safetensors.index.json": 49731,
+        "special_tokens_map.json": 613,
+        "tokenizer.json": 11422654,
+        "tokenizer_config.json": 9706,
+        "vocab.json": 2776833
+      },
+      "expectedDownloadBytes": 351384491,
+      "expectedWeightsBytes": 335450584,
+      "gigabytes": 0.3514,
+      "category": "Text refinement",
+      "variant": "4-bit",
+      "runtime": "MLXLLM qwen3",
+      "validation": "Experimental. Loads offline, but returned only a dash for a simple bullet-formatting prompt. Quibble retained its input. Use the larger instruction models for more reliable formatting.",
+      "languages": "Multilingual instruction model. English prompts are the tested baseline.",
+      "parameters": 600000000,
+      "license": "Apache-2.0",
+      "inferenceNotes": "Pass additionalContext enable_thinking false; custom prompt quality must be measured",
+      "detail": "Small instruction model for lightweight custom prompts. Prompt following needs evaluation.",
+      "artifactSource": "conversion"
+    },
+    {
+      "name": "qwen3-1.7b-4bit",
+      "title": "Qwen3 1.7B",
+      "repository": "mlx-community/Qwen3-1.7B-4bit",
+      "revision": "3b1b1768f8f8cf8351c712464f906e86c2b8269e",
+      "source": "https://huggingface.co/Qwen/Qwen3-1.7B",
+      "files": [
+        "README.md",
+        "added_tokens.json",
+        "config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "fileBytes": {
+        "README.md": 873,
+        "added_tokens.json": 707,
+        "config.json": 937,
+        "merges.txt": 1671853,
+        "model.safetensors": 968080210,
+        "model.safetensors.index.json": 49731,
+        "special_tokens_map.json": 613,
+        "tokenizer.json": 11422654,
+        "tokenizer_config.json": 9706,
+        "vocab.json": 2776833
+      },
+      "expectedDownloadBytes": 984014117,
+      "expectedWeightsBytes": 968080210,
+      "gigabytes": 0.984,
+      "category": "Text refinement",
+      "variant": "4-bit",
+      "runtime": "MLXLLM qwen3",
+      "validation": "Experimental. Offline bullet-formatting smoke test passed while preserving the saved spelling. Broader prompt following is unmeasured.",
+      "languages": "Multilingual instruction model. English prompts are the tested baseline.",
+      "parameters": 1700000000,
+      "license": "Apache-2.0",
+      "inferenceNotes": "Pass additionalContext enable_thinking false; custom prompt quality must be measured",
+      "detail": "A middle-size instruction model for custom workflow steps.",
+      "artifactSource": "conversion"
+    },
+    {
+      "name": "cohere-8bit",
+      "repository": "beshkenadze/cohere-transcribe-03-2026-mlx-8bit",
+      "revision": "d1f843476f84846e6fe7aa58a6033f17882f0ec9",
+      "files": [
+        "README.md",
+        "config.json",
+        "conversion_summary.json",
+        "key_map.json",
+        "model.safetensors",
+        "preprocessor_config.json",
+        "special_tokens_map.json",
+        "tokenizer.model",
+        "tokenizer_config.json"
+      ],
+      "source": "https://huggingface.co/CohereLabs/cohere-transcribe-03-2026",
+      "title": "Cohere Transcribe",
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "gigabytes": 2.419,
+      "detail": "Higher weight precision option. Uses more memory than 4-bit; upstream accuracy is a reference, not a measured variant score.",
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "Apache-2.0; see model source",
+      "validation": "Smoke-tested on short and 40-second English files in Quibble, including cold/warm runs, section boundaries and model unload (2026-09-06). Wider accuracy remains unmeasured.",
+      "parameters": 2000000000,
+      "familyID": "cohere",
+      "quantizationBits": 8,
+      "benchmarkModelID": "cohere-4bit",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 1804,
+        "config.json": 4336,
+        "conversion_summary.json": 5237,
+        "key_map.json": 179652,
+        "model.safetensors": 2418031831,
+        "preprocessor_config.json": 420,
+        "special_tokens_map.json": 4091,
+        "tokenizer.model": 492827,
+        "tokenizer_config.json": 48141
+      },
+      "smokeTested": true
+    },
+    {
+      "name": "qwen3-asr-8bit",
+      "repository": "mlx-community/Qwen3-ASR-1.7B-8bit",
+      "revision": "a8379a2e2f9e313c9292cdf1af4055ab56d50d55",
+      "files": [
+        "README.md",
+        "chat_template.json",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "source": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B",
+      "title": "Qwen3 ASR",
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "gigabytes": 2.468,
+      "detail": "Higher weight precision option. Uses more memory than 4-bit; upstream accuracy is a reference, not a measured variant score.",
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "Apache-2.0; see model source",
+      "validation": "Smoke-tested on short and 40-second English files, one saved-name correction and one unrelated-name preservation case, with unload checked (2026-09-06). Wider accuracy remains unmeasured.",
+      "parameters": 1700000000,
+      "familyID": "qwen3-asr-17b",
+      "quantizationBits": 8,
+      "benchmarkModelID": "qwen3-asr-4bit",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 1008,
+        "chat_template.json": 1161,
+        "config.json": 7188,
+        "generation_config.json": 142,
+        "merges.txt": 1671853,
+        "model.safetensors": 2463307541,
+        "model.safetensors.index.json": 78968,
+        "preprocessor_config.json": 330,
+        "tokenizer_config.json": 12487,
+        "vocab.json": 2776833
+      },
+      "smokeTested": true
+    },
+    {
+      "name": "qwen3-asr-06b-8bit",
+      "title": "Qwen3 ASR 0.6B",
+      "repository": "mlx-community/Qwen3-ASR-0.6B-8bit",
+      "revision": "89e96d92ba34aca20b3e29fb10cc284097d1219f",
+      "source": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B",
+      "files": [
+        "README.md",
+        "chat_template.json",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "fileBytes": {
+        "README.md": 1008,
+        "chat_template.json": 1161,
+        "config.json": 7187,
+        "generation_config.json": 142,
+        "merges.txt": 1671853,
+        "model.safetensors": 1006229426,
+        "model.safetensors.index.json": 71815,
+        "preprocessor_config.json": 330,
+        "tokenizer_config.json": 12487,
+        "vocab.json": 2776833
+      },
+      "expectedDownloadBytes": 712779760,
+      "expectedWeightsBytes": 708236945,
+      "gigabytes": 1.011,
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "runtime": "Qwen3ASRModel",
+      "validation": "Same native adapter as the 4-bit variant. Exact-artifact audio validation pending; upstream accuracy is a reference.",
+      "languages": "Chinese, English, Cantonese, Arabic, German, French, Spanish, Portuguese, Indonesian, Italian, Korean, Russian, Thai, Vietnamese, Japanese, Turkish, Hindi, Malay, Dutch, Swedish, Danish, Finnish, Polish, Czech, Filipino, Persian, Greek, Romanian, Hungarian, Macedonian",
+      "parameters": 600000000,
+      "license": "Apache-2.0",
+      "inferenceNotes": "Greedy ASR; temperature accepted but ineffective",
+      "detail": "Higher weight precision option. Uses more memory than 4-bit; upstream accuracy is a reference, not a measured variant score.",
+      "familyID": "qwen3-asr-06b",
+      "quantizationBits": 8,
+      "benchmarkModelID": "qwen3-asr-06b-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": false
+    },
+    {
+      "name": "whisper-turbo-vocabulary-8bit",
+      "repository": "mlx-community/whisper-large-v3-turbo-8bit",
+      "revision": "62103fc276a35fdc76e318f314d8ff47987fba89",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-large-v3-turbo",
+          "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+        }
+      },
+      "title": "Whisper Turbo",
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "gigabytes": 0.864,
+      "detail": "Higher weight precision option. Uses more memory than 4-bit; upstream accuracy is a reference, not a measured variant score.",
+      "source": "https://huggingface.co/openai/whisper-large-v3-turbo",
+      "expectedDownloadBytes": 468081051,
+      "expectedWeightsBytes": 463462982,
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Smoke-tested on short and 40-second English files in Quibble, including cold/warm runs, section boundaries and model unload (2026-09-06). Wider accuracy remains unmeasured.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 809000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "familyID": "whisper-turbo",
+      "quantizationBits": 8,
+      "benchmarkModelID": "whisper-turbo-vocabulary-4bit",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 849,
+        "config.json": 341,
+        "model.safetensors": 863659156
+      },
+      "smokeTested": true
+    },
+    {
+      "name": "whisper-large-vocabulary-8bit",
+      "title": "Whisper Large v3",
+      "repository": "mlx-community/whisper-large-v3-8bit",
+      "revision": "7fede54fd97b154a4f5e476646484fc023b1bcdf",
+      "source": "https://huggingface.co/openai/whisper-large-v3",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-large-v3",
+          "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1"
+        }
+      },
+      "fileBytes": {
+        "README.md": 800,
+        "config.json": 342,
+        "model.safetensors": 1644890344
+      },
+      "expectedDownloadBytes": 882079348,
+      "expectedWeightsBytes": 877691017,
+      "gigabytes": 1.646,
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Same native adapter as the 4-bit variant. Exact-artifact audio validation pending; upstream accuracy is a reference.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 1550000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "detail": "Higher weight precision option. Uses more memory than 4-bit; upstream accuracy is a reference, not a measured variant score.",
+      "familyID": "whisper-large-v3",
+      "quantizationBits": 8,
+      "benchmarkModelID": "whisper-large-vocabulary-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": false
+    },
+    {
+      "name": "whisper-small-8bit",
+      "title": "Whisper Small",
+      "repository": "mlx-community/whisper-small-8bit",
+      "revision": "c2f1b4b958f9037b53ef14b467a77208e23c10d3",
+      "source": "https://huggingface.co/openai/whisper-small",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-small",
+          "revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+        }
+      },
+      "fileBytes": {
+        "README.md": 785,
+        "config.json": 339,
+        "model.safetensors": 258118408
+      },
+      "expectedDownloadBytes": 143298081,
+      "expectedWeightsBytes": 139111057,
+      "gigabytes": 0.259,
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Same native adapter as the 4-bit variant. Exact-artifact audio validation pending; upstream accuracy is a reference.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 244000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "detail": "Higher weight precision option. Uses more memory than 4-bit; upstream accuracy is a reference, not a measured variant score.",
+      "familyID": "whisper-small",
+      "quantizationBits": 8,
+      "benchmarkModelID": "whisper-small-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": false
+    },
+    {
+      "name": "whisper-base-8bit",
+      "title": "Whisper Base",
+      "repository": "mlx-community/whisper-base-8bit",
+      "revision": "a6f6355aba6b77681c614ee1eb40264230bf76e7",
+      "source": "https://huggingface.co/openai/whisper-base",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "merges.txt",
+        "vocab.json",
+        "normalizer.json",
+        "added_tokens.json"
+      ],
+      "fileSources": {
+        "generation_config.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "tokenizer.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "tokenizer_config.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "special_tokens_map.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "merges.txt": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "vocab.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "normalizer.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        },
+        "added_tokens.json": {
+          "repository": "openai/whisper-base",
+          "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+        }
+      },
+      "fileBytes": {
+        "README.md": 780,
+        "config.json": 335,
+        "model.safetensors": 77513748
+      },
+      "expectedDownloadBytes": 46402933,
+      "expectedWeightsBytes": 42215979,
+      "gigabytes": 0.078,
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "runtime": "QuibbleWhisper.WhisperModel",
+      "validation": "Same native adapter as the 4-bit variant. Exact-artifact audio validation pending; upstream accuracy is a reference.",
+      "languages": "Multilingual; language must be explicitly selected in current adapter",
+      "parameters": 74000000,
+      "license": "MIT upstream weights; Apache-2.0 conversion card; retain source notices",
+      "detail": "Higher weight precision option. Uses more memory than 4-bit; upstream accuracy is a reference, not a measured variant score.",
+      "familyID": "whisper-base",
+      "quantizationBits": 8,
+      "benchmarkModelID": "whisper-base-4bit",
+      "artifactSource": "conversion",
+      "smokeTested": false
+    },
+    {
+      "name": "canary-v2-8bit",
+      "repository": "Mediform/canary-1b-v2-mlx-q8",
+      "revision": "0b6b32ee10f30c89e3ead7249bb636445e3019ee",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors"
+      ],
+      "source": "https://huggingface.co/nvidia/canary-1b-v2",
+      "title": "Canary v2",
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "gigabytes": 1.137,
+      "detail": "Multilingual recognition with a compact 8-bit download.",
+      "languages": "25 European languages; this app exposes English, German, French, Spanish, Italian and Portuguese.",
+      "license": "CC-BY-4.0; NVIDIA model, Mediform community conversion",
+      "validation": "Smoke-tested on short and 40-second English files, one saved-name correction and one unrelated-name preservation case, with unload checked (2026-09-06). Wider accuracy remains unmeasured.",
+      "parameters": 1000000000,
+      "familyID": "canary-v2",
+      "quantizationBits": 8,
+      "benchmarkModelID": "canary-v2-8bit",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 78,
+        "config.json": 673039,
+        "model.safetensors": 1136436574
+      },
+      "smokeTested": true
+    },
+    {
+      "name": "nemotron-35-8bit",
+      "repository": "mlx-community/nemotron-3.5-asr-streaming-0.6b-8bit",
+      "revision": "7279359e4481b5e9e185a318bd618e429c6d86cd",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "tokenizer.model",
+        "vocab.txt"
+      ],
+      "source": "https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b",
+      "title": "Nemotron 3.5",
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "gigabytes": 0.756,
+      "detail": "Compact multilingual recognition; this app transcribes on release.",
+      "languages": "40 language-locales upstream; this app exposes a selected language subset.",
+      "license": "OpenMDW-1.1; NVIDIA model, community MLX conversion",
+      "validation": "Smoke-tested on short and 40-second English files, one saved-name correction and one unrelated-name preservation case, with unload checked (2026-09-06). Wider accuracy remains unmeasured.",
+      "parameters": 600000000,
+      "familyID": "nemotron-35",
+      "quantizationBits": 8,
+      "benchmarkModelID": "nemotron-35-8bit",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 3093,
+        "config.json": 159605,
+        "model.safetensors": 755598923,
+        "tokenizer.model": 406554,
+        "vocab.txt": 78294
+      },
+      "smokeTested": true
+    },
+    {
+      "name": "moonshine-tiny",
+      "repository": "moonshine-ai/moonshine-tiny",
+      "revision": "390624ed33d594443aa4aa221f5b9f283b545b5a",
+      "files": [
+        "README.md",
+        "config.json",
+        "generation_config.json",
+        "model.safetensors",
+        "preprocessor_config.json",
+        "tokenizer.json"
+      ],
+      "source": "https://huggingface.co/moonshine-ai/moonshine-tiny",
+      "title": "Moonshine Tiny",
+      "category": "Speech recognition",
+      "variant": "FP32 \u00b7 Official",
+      "gigabytes": 0.11,
+      "detail": "A very small English recognizer for short dictation.",
+      "languages": "English only. Original model, not Moonshine Streaming.",
+      "license": "MIT; official original English weights",
+      "validation": "Native adapter integrated. Exact-artifact audio validation pending; see the dated coverage report.",
+      "parameters": 27000000,
+      "familyID": "moonshine-tiny",
+      "quantizationBits": null,
+      "benchmarkModelID": "moonshine-tiny",
+      "artifactSource": "publisher",
+      "fileBytes": {
+        "README.md": 7959,
+        "config.json": 897,
+        "generation_config.json": 189,
+        "model.safetensors": 108389192,
+        "preprocessor_config.json": 215,
+        "tokenizer.json": 1985530
+      },
+      "smokeTested": false
+    },
+    {
+      "name": "moonshine-base",
+      "repository": "moonshine-ai/moonshine-base",
+      "revision": "7a73d8d55ac0ba2ef3ae761593f6784b51f96dcf",
+      "files": [
+        "README.md",
+        "config.json",
+        "generation_config.json",
+        "model.safetensors",
+        "preprocessor_config.json",
+        "tokenizer.json"
+      ],
+      "source": "https://huggingface.co/moonshine-ai/moonshine-base",
+      "title": "Moonshine Base",
+      "category": "Speech recognition",
+      "variant": "FP32 \u00b7 Official",
+      "gigabytes": 0.248,
+      "detail": "Lightweight English recognition using official weights.",
+      "languages": "English only. Original model, not Moonshine Streaming.",
+      "license": "MIT; official original English weights",
+      "validation": "Smoke-tested on short and 40-second English files, one saved-name correction and one unrelated-name preservation case, with unload checked (2026-09-06). Wider accuracy remains unmeasured.",
+      "parameters": 61000000,
+      "familyID": "moonshine-base",
+      "quantizationBits": null,
+      "benchmarkModelID": "moonshine-base",
+      "artifactSource": "publisher",
+      "fileBytes": {
+        "README.md": 7960,
+        "config.json": 976,
+        "generation_config.json": 189,
+        "model.safetensors": 246079928,
+        "preprocessor_config.json": 215,
+        "tokenizer.json": 1985530
+      },
+      "smokeTested": true
+    },
+    {
+      "name": "granite-4-speech-4bit",
+      "repository": "mlx-community/granite-4.0-1b-speech-4bit",
+      "revision": "7e42cf86c0f595f0c38327eae7a90a8c11a17281",
+      "files": [
+        "README.md",
+        "added_tokens.json",
+        "config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "processor_config.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "source": "https://huggingface.co/ibm-granite/granite-4.0-1b-speech",
+      "title": "Granite Speech 4.0",
+      "category": "Speech recognition",
+      "variant": "4-bit",
+      "gigabytes": 1.997,
+      "detail": "Multilingual speech recognition with the native Granite adapter.",
+      "languages": "English, French, German, Spanish, Portuguese and Japanese input. Recognition only; translation is not enabled.",
+      "license": "Apache-2.0; IBM model, community MLX conversion",
+      "validation": "Native adapter integrated. Exact-artifact audio validation pending; see the dated coverage report.",
+      "parameters": 2000000000,
+      "familyID": "granite-4-speech",
+      "quantizationBits": 4,
+      "benchmarkModelID": "granite-4-speech-5bit",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 1172,
+        "added_tokens.json": 26,
+        "config.json": 2854,
+        "merges.txt": 916646,
+        "model.safetensors": 1985753620,
+        "model.safetensors.index.json": 120558,
+        "preprocessor_config.json": 336,
+        "processor_config.json": 80,
+        "special_tokens_map.json": 579,
+        "tokenizer.json": 7153607,
+        "tokenizer_config.json": 17882,
+        "vocab.json": 1612704
+      },
+      "smokeTested": false
+    },
+    {
+      "name": "granite-4-speech-5bit",
+      "repository": "mlx-community/granite-4.0-1b-speech-5bit",
+      "revision": "371e6922faffba916e983e9c083049ad44536e94",
+      "files": [
+        "README.md",
+        "added_tokens.json",
+        "config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "processor_config.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "source": "https://huggingface.co/ibm-granite/granite-4.0-1b-speech",
+      "title": "Granite Speech 4.0",
+      "category": "Speech recognition",
+      "variant": "5-bit",
+      "gigabytes": 2.227,
+      "detail": "Multilingual speech recognition with the native Granite adapter.",
+      "languages": "English, French, German, Spanish, Portuguese and Japanese input. Recognition only; translation is not enabled.",
+      "license": "Apache-2.0; IBM model, community MLX conversion",
+      "validation": "Smoke-tested on short and 40-second English files, one saved-name correction and one unrelated-name preservation case, with unload checked (2026-09-06). Wider accuracy remains unmeasured.",
+      "parameters": 2000000000,
+      "familyID": "granite-4-speech",
+      "quantizationBits": 5,
+      "benchmarkModelID": "granite-4-speech-5bit",
+      "artifactSource": "conversion",
+      "preferredVariant": true,
+      "fileBytes": {
+        "README.md": 1172,
+        "added_tokens.json": 26,
+        "config.json": 2854,
+        "merges.txt": 916646,
+        "model.safetensors": 2215392490,
+        "model.safetensors.index.json": 120558,
+        "preprocessor_config.json": 336,
+        "processor_config.json": 80,
+        "special_tokens_map.json": 579,
+        "tokenizer.json": 7153607,
+        "tokenizer_config.json": 17882,
+        "vocab.json": 1612704
+      },
+      "smokeTested": true
+    },
+    {
+      "name": "granite-4-speech-8bit",
+      "repository": "mlx-community/granite-4.0-1b-speech-8bit",
+      "revision": "5ed3098fb331d0131cb2aeafdbacc19841359736",
+      "files": [
+        "README.md",
+        "added_tokens.json",
+        "config.json",
+        "merges.txt",
+        "model.safetensors",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "processor_config.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ],
+      "source": "https://huggingface.co/ibm-granite/granite-4.0-1b-speech",
+      "title": "Granite Speech 4.0",
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "gigabytes": 2.916,
+      "detail": "Multilingual speech recognition with the native Granite adapter.",
+      "languages": "English, French, German, Spanish, Portuguese and Japanese input. Recognition only; translation is not enabled.",
+      "license": "Apache-2.0; IBM model, community MLX conversion",
+      "validation": "Native adapter integrated. Exact-artifact audio validation pending; see the dated coverage report.",
+      "parameters": 2000000000,
+      "familyID": "granite-4-speech",
+      "quantizationBits": 8,
+      "benchmarkModelID": "granite-4-speech-5bit",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 1172,
+        "added_tokens.json": 26,
+        "config.json": 2854,
+        "merges.txt": 916646,
+        "model.safetensors": 2904308838,
+        "model.safetensors.index.json": 120558,
+        "preprocessor_config.json": 336,
+        "processor_config.json": 80,
+        "special_tokens_map.json": 579,
+        "tokenizer.json": 7153607,
+        "tokenizer_config.json": 17882,
+        "vocab.json": 1612704
+      },
+      "smokeTested": false
+    },
+    {
+      "name": "parakeet-8bit",
+      "repository": "animaslabs/parakeet-tdt-0.6b-v3-mlx-8bit",
+      "revision": "18498133db8b4c8753bf98b3c5b6639b2a791be3",
+      "source": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3",
+      "files": [
+        "README.md",
+        "config.json",
+        "model.safetensors",
+        "model_config.yaml",
+        "tokenizer.model",
+        "tokenizer.vocab",
+        "vocab.txt"
+      ],
+      "title": "Parakeet v3",
+      "category": "Speech recognition",
+      "variant": "8-bit",
+      "gigabytes": 0.909,
+      "detail": "Multilingual TDT recognition with aligned sentence timing.",
+      "languages": "Multilingual model; this app currently exposes a selected language subset. English is the tested baseline.",
+      "license": "CC-BY-4.0; NVIDIA model, Animaslabs community conversion",
+      "validation": "Smoke-tested on short and 40-second English files in Quibble, including cold/warm runs, section boundaries and model unload (2026-09-06). Wider accuracy remains unmeasured.",
+      "parameters": 600000000,
+      "familyID": "parakeet-v3",
+      "quantizationBits": 8,
+      "benchmarkModelID": "parakeet",
+      "artifactSource": "conversion",
+      "fileBytes": {
+        "README.md": 1733,
+        "config.json": 318494,
+        "model.safetensors": 908392684,
+        "model_config.yaml": 161386,
+        "tokenizer.model": 360916,
+        "tokenizer.vocab": 101024,
+        "vocab.txt": 46772
+      },
+      "smokeTested": true
+    }
+  ]
+}

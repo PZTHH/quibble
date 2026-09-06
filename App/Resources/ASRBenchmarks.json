@@ -1,0 +1,294 @@
+{
+  "retrievedAt": "2026-09-06",
+  "directionalAfter": "2026-09-12",
+  "task": "English short-form · 8 public datasets",
+  "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+  "sourceRevision": "eec9efdf93683faf1dfb36c7d77b3c12d746215e",
+  "sourceRepository": "hf-audio/open-asr-leaderboard-results",
+  "sourceFile": "english_short_latest.csv",
+  "sourceFileSHA256": "07f02da66f62ea16ee6999163109544e8ffccc5476fd4b73149bc21b1e987451",
+  "leaderboardURL": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+  "leaderboardCodeRevision": "c469d4f9f92c51969eed6b536e57b8dde62bcf58",
+  "methodology": "Unweighted mean of the same eight public English short-form dataset WER percentages. Lower WER is better. Scores match the pinned CSV avg column. This subset excludes private scripted/conversational data included in the current default leaderboard UI. Upstream results do not measure Quibble’s exact runtime or quantized weights. Published H200 throughput is separately scoped under speedBenchmark; it is not a Mac speed measurement.",
+  "datasets": [
+    "AMI-Cleaned",
+    "Earnings22-Cleaned-AA-chunked",
+    "Gigaspeech-Cleaned",
+    "LS Clean",
+    "LS Other",
+    "SPGISpeech",
+    "Voice Arena Monsoon",
+    "Voxpopuli-AA-Cleaned"
+  ],
+  "metric": "word_error_rate",
+  "unit": "percent",
+  "lowerIsBetter": true,
+  "evaluatedWeightRevisions": "Not reported in the source CSV; the pinned revision identifies the results snapshot, not model weights.",
+  "results": [
+    {
+      "modelID": "cohere-4bit",
+      "evaluatedModel": "CohereLabs/cohere-transcribe-03-2026",
+      "werPercent": 4.67,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream benchmark, not a measurement of Quibble’s MLX conversion, quantization, vocabulary helper, or workflow. The 4-bit and FP16 variants share this upstream reference; their local accuracy difference is unmeasured.",
+      "datasetWERPercent": {
+        "AMI-Cleaned": 7.02,
+        "Earnings22-Cleaned-AA-chunked": 7.88,
+        "Gigaspeech-Cleaned": 7.88,
+        "LS Clean": 0.97,
+        "LS Other": 2.05,
+        "SPGISpeech": 2.74,
+        "Voice Arena Monsoon": 3.44,
+        "Voxpopuli-AA-Cleaned": 5.38
+      },
+      "rtfx": 906.56,
+      "datasetRTFx": {
+        "AMI-Cleaned": 822.6616,
+        "Earnings22-Cleaned-AA-chunked": 613.2278,
+        "Gigaspeech-Cleaned": 895.0905,
+        "LS Clean": 733.4036,
+        "LS Other": 629.9073,
+        "SPGISpeech": 973.8289,
+        "Voice Arena Monsoon": 757.8546,
+        "Voxpopuli-AA-Cleaned": 905.588
+      }
+    },
+    {
+      "modelID": "cohere",
+      "evaluatedModel": "CohereLabs/cohere-transcribe-03-2026",
+      "werPercent": 4.67,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream benchmark, not a measurement of Quibble’s MLX conversion, quantization, vocabulary helper, or workflow.",
+      "datasetWERPercent": {
+        "AMI-Cleaned": 7.02,
+        "Earnings22-Cleaned-AA-chunked": 7.88,
+        "Gigaspeech-Cleaned": 7.88,
+        "LS Clean": 0.97,
+        "LS Other": 2.05,
+        "SPGISpeech": 2.74,
+        "Voice Arena Monsoon": 3.44,
+        "Voxpopuli-AA-Cleaned": 5.38
+      },
+      "rtfx": 906.56,
+      "datasetRTFx": {
+        "AMI-Cleaned": 822.6616,
+        "Earnings22-Cleaned-AA-chunked": 613.2278,
+        "Gigaspeech-Cleaned": 895.0905,
+        "LS Clean": 733.4036,
+        "LS Other": 629.9073,
+        "SPGISpeech": 973.8289,
+        "Voice Arena Monsoon": 757.8546,
+        "Voxpopuli-AA-Cleaned": 905.588
+      }
+    },
+    {
+      "modelID": "parakeet",
+      "evaluatedModel": "nvidia/parakeet-tdt-0.6b-v3",
+      "werPercent": 4.85875,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream benchmark, not a measurement of Quibble’s MLX conversion, quantization, vocabulary helper, or workflow.",
+      "datasetWERPercent": {
+        "AMI-Cleaned": 9.42,
+        "Earnings22-Cleaned-AA-chunked": 5.85,
+        "Gigaspeech-Cleaned": 7.99,
+        "LS Clean": 1.52,
+        "LS Other": 3.13,
+        "SPGISpeech": 3.63,
+        "Voice Arena Monsoon": 4.14,
+        "Voxpopuli-AA-Cleaned": 3.19
+      },
+      "rtfx": 6076.07,
+      "datasetRTFx": {
+        "AMI-Cleaned": 3757.2741,
+        "Earnings22-Cleaned-AA-chunked": 3012.6016,
+        "Gigaspeech-Cleaned": 5682.6812,
+        "LS Clean": 4218.0414,
+        "LS Other": 4353.5694,
+        "SPGISpeech": 7343.977,
+        "Voice Arena Monsoon": 4959.3687,
+        "Voxpopuli-AA-Cleaned": 2878.2095
+      }
+    },
+    {
+      "modelID": "qwen3-asr-4bit",
+      "evaluatedModel": "Qwen/Qwen3-ASR-1.7B-hf",
+      "werPercent": 4.31125,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream benchmark, not a measurement of Quibble’s MLX conversion, quantization, vocabulary helper, or workflow. The evaluated checkpoint is Qwen’s Transformers-native -hf edition; Quibble uses a separately converted 4-bit edition of the same model family.",
+      "datasetWERPercent": {
+        "AMI-Cleaned": 8.31,
+        "Earnings22-Cleaned-AA-chunked": 5.84,
+        "Gigaspeech-Cleaned": 7.22,
+        "LS Clean": 1.26,
+        "LS Other": 2.94,
+        "SPGISpeech": 2.57,
+        "Voice Arena Monsoon": 3.5,
+        "Voxpopuli-AA-Cleaned": 2.85
+      },
+      "rtfx": 819.96,
+      "datasetRTFx": {
+        "AMI-Cleaned": 709.9597,
+        "Earnings22-Cleaned-AA-chunked": 446.0806,
+        "Gigaspeech-Cleaned": 752.4185,
+        "LS Clean": 664.199,
+        "LS Other": 616.5048,
+        "SPGISpeech": 941.0222,
+        "Voice Arena Monsoon": 625.9647,
+        "Voxpopuli-AA-Cleaned": 398.2531
+      }
+    },
+    {
+      "modelID": "qwen3-asr-06b-4bit",
+      "evaluatedModel": "Qwen/Qwen3-ASR-0.6B-hf",
+      "werPercent": 5.045,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream benchmark, not a measurement of Quibble’s MLX conversion, quantization, vocabulary helper, or workflow. The evaluated checkpoint is Qwen’s Transformers-native -hf edition; Quibble uses a separately converted 4-bit edition of the same model family.",
+      "datasetWERPercent": {
+        "AMI-Cleaned": 9.33,
+        "Earnings22-Cleaned-AA-chunked": 7.83,
+        "Gigaspeech-Cleaned": 7.62,
+        "LS Clean": 1.7,
+        "LS Other": 4.01,
+        "SPGISpeech": 2.74,
+        "Voice Arena Monsoon": 4.23,
+        "Voxpopuli-AA-Cleaned": 2.9
+      },
+      "rtfx": 743.96,
+      "datasetRTFx": {
+        "AMI-Cleaned": 338.1007,
+        "Earnings22-Cleaned-AA-chunked": 494.1682,
+        "Gigaspeech-Cleaned": 805.6876,
+        "LS Clean": 723.1457,
+        "LS Other": 653.1892,
+        "SPGISpeech": 838.6944,
+        "Voice Arena Monsoon": 658.491,
+        "Voxpopuli-AA-Cleaned": 388.3293
+      }
+    },
+    {
+      "modelID": "whisper-turbo-vocabulary-4bit",
+      "evaluatedModel": "openai/whisper-large-v3-turbo",
+      "werPercent": 6.36,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream benchmark, not a measurement of Quibble’s MLX conversion, quantization, vocabulary helper, or workflow.",
+      "datasetWERPercent": {
+        "AMI-Cleaned": 13.88,
+        "Earnings22-Cleaned-AA-chunked": 8.09,
+        "Gigaspeech-Cleaned": 8.47,
+        "LS Clean": 2.13,
+        "LS Other": 3.71,
+        "SPGISpeech": 2.79,
+        "Voice Arena Monsoon": 4.79,
+        "Voxpopuli-AA-Cleaned": 7.02
+      },
+      "rtfx": 791.52,
+      "datasetRTFx": {
+        "AMI-Cleaned": 365.312,
+        "Earnings22-Cleaned-AA-chunked": 961.3781,
+        "Gigaspeech-Cleaned": 635.3787,
+        "LS Clean": 577.9653,
+        "LS Other": 646.8641,
+        "SPGISpeech": 984.664,
+        "Voice Arena Monsoon": 986.3498,
+        "Voxpopuli-AA-Cleaned": 821.3771
+      }
+    },
+    {
+      "modelID": "whisper-large-vocabulary-4bit",
+      "evaluatedModel": "openai/whisper-large-v3",
+      "werPercent": 5.78,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream benchmark, not a measurement of Quibble’s MLX conversion, quantization, vocabulary helper, or workflow.",
+      "datasetWERPercent": {
+        "AMI-Cleaned": 13.63,
+        "Earnings22-Cleaned-AA-chunked": 7.99,
+        "Gigaspeech-Cleaned": 8.35,
+        "LS Clean": 1.56,
+        "LS Other": 3.52,
+        "SPGISpeech": 2.71,
+        "Voice Arena Monsoon": 3.95,
+        "Voxpopuli-AA-Cleaned": 4.53
+      },
+      "rtfx": 470.2,
+      "datasetRTFx": {
+        "AMI-Cleaned": 284.2469,
+        "Earnings22-Cleaned-AA-chunked": 685.0505,
+        "Gigaspeech-Cleaned": 377.1858,
+        "LS Clean": 485.126,
+        "LS Other": 430.9607,
+        "SPGISpeech": 538.947,
+        "Voice Arena Monsoon": 506.0687,
+        "Voxpopuli-AA-Cleaned": 609.2825
+      }
+    },
+    {
+      "modelID": "canary-v2-8bit",
+      "evaluatedModel": "nvidia/canary-1b-v2",
+      "werPercent": 5.70625,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream reference checkpoint, not measured Quibble or quantized-variant accuracy. English short-form public dataset subset only.",
+      "rtfx": 1825.15
+    },
+    {
+      "modelID": "nemotron-35-8bit",
+      "evaluatedModel": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+      "werPercent": 7.87625,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream reference checkpoint, not measured Quibble or quantized-variant accuracy. English short-form public dataset subset only.",
+      "rtfx": 1471.92
+    },
+    {
+      "modelID": "moonshine-tiny",
+      "evaluatedModel": "usefulsensors/moonshine-tiny",
+      "werPercent": 11.775,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream reference checkpoint, not measured Quibble or quantized-variant accuracy. English short-form public dataset subset only.",
+      "rtfx": 3839.5
+    },
+    {
+      "modelID": "granite-4-speech-5bit",
+      "evaluatedModel": "ibm-granite/granite-4.0-1b-speech",
+      "werPercent": 5.095,
+      "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+      "note": "Upstream reference checkpoint, not measured Quibble or quantized-variant accuracy. English short-form public dataset subset only.",
+      "rtfx": 666.16
+    }
+  ],
+  "unavailable": [
+    {
+      "modelID": "whisper-base-4bit",
+      "evaluatedModel": "openai/whisper-base",
+      "reason": "This exact multilingual checkpoint has no published accuracy or speed row in the current eight-dataset Hugging Face comparison. English-only and historical results use a different scope."
+    },
+    {
+      "modelID": "whisper-small-4bit",
+      "evaluatedModel": "openai/whisper-small",
+      "reason": "This exact multilingual checkpoint has no published accuracy or speed row in the current eight-dataset Hugging Face comparison. English-only and historical results use a different scope."
+    },
+    {
+      "modelID": "moonshine-base",
+      "evaluatedModel": "moonshine-ai/moonshine-base",
+      "reason": "This checkpoint has no row in the current eight-dataset Hugging Face comparison. Its historical seven-dataset results omit Voice Arena Monsoon and cannot share this rating scale."
+    }
+  ],
+  "speedBenchmark": {
+    "retrievedAt": "2026-09-06",
+    "hardware": "NVIDIA H200",
+    "scope": "English short-form · 8 public datasets",
+    "methodology": "Duration-pooled inverse real-time factor (RTFx) over the same eight public English short-form datasets: total audio seconds divided by total inference seconds. Published CSV RTFx is retained. More is faster in this upstream benchmark. Quibble displays a relative rank, not a proportional latency estimate.",
+    "sourceURL": "https://huggingface.co/datasets/hf-audio/open-asr-leaderboard-results/blob/eec9efdf93683faf1dfb36c7d77b3c12d746215e/english_short_latest.csv",
+    "hardwareSourceURL": "https://github.com/huggingface/open_asr_leaderboard/blob/48219c6028db0517d704600d92f31edfc96e8c23/README.md#evaluate-a-model-as-of-24-july-2026",
+    "note": "Hugging Face evaluates upstream model runtimes on NVIDIA H200 jobs. These are batched benchmark throughput references, not Mac dictation latency. Batch sizes and runtime implementations may differ by model family. Quibble’s MLX and quantized variants share their upstream reference; their actual local speed can differ.",
+    "datasetAudioSeconds": {
+      "AMI-Cleaned": 28727.6,
+      "Earnings22-Cleaned-AA-chunked": 6900.9,
+      "Gigaspeech-Cleaned": 126515.2,
+      "LS Clean": 19452.5,
+      "LS Other": 19229.6,
+      "SPGISpeech": 360007.5,
+      "Voice Arena Monsoon": 20247.6,
+      "Voxpopuli-AA-Cleaned": 7122.4
+    },
+    "aggregationCodeURL": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard/blob/c469d4f9f92c51969eed6b536e57b8dde62bcf58/app.py"
+  }
+}

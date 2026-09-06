@@ -1,0 +1,31 @@
+--- App/VocabularyBenchmark.swift
++++ App/VocabularyBenchmark.swift
+@@ -126,3 +126,28 @@
+         try JSONSerialization.data(withJSONObject: results, options: [.prettyPrinted, .sortedKeys]).write(to: URL(fileURLWithPath: args[3]), options: .atomic)
+     }
+ }
++
++extension VocabularyBenchmark {
++    private struct AcousticFixture: Decodable {
++        let audio: String
++        let name: String
++        let transcripts: [String]
++        let expectedIndex: Int
++    }
++    @MainActor static func runAcoustic(_ args: [String]) async throws {
++        guard args.count == 4 else { throw CocoaError(.fileReadInvalidFileName) }
++        let fixtures = try JSONDecoder().decode([AcousticFixture].self, from: Data(contentsOf: URL(fileURLWithPath: args[2])))
++        let engine = LocalInference()
++        var rows: [[String: Any]] = []
++        for fixture in fixtures {
++            let start = ProcessInfo.processInfo.systemUptime
++            let scores = try await engine.probeAcousticVocabulary(file: URL(fileURLWithPath: fixture.audio),
++                root: URL(fileURLWithPath: args[1]), transcripts: fixture.transcripts)
++            let totals = scores.map { $0.reduce(0, +) }
++            rows.append(["name": fixture.name, "transcripts": fixture.transcripts, "expectedIndex": fixture.expectedIndex,
++                "scores": scores, "totals": totals, "seconds": ProcessInfo.processInfo.systemUptime - start])
++            try JSONSerialization.data(withJSONObject: rows, options: [.prettyPrinted, .sortedKeys]).write(to: URL(fileURLWithPath: args[3]), options: .atomic)
++            print("\(fixture.name): \(totals)")
++        }
++    }
++}

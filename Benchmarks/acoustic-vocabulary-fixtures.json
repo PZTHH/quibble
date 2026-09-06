@@ -1,0 +1,121 @@
+[
+  {
+    "name": "siobhan",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/siobhan.aiff",
+    "transcripts": [
+      "Please send the report to Shivan.",
+      "Please send the report to Siobhan."
+    ],
+    "expectedIndex": 1
+  },
+  {
+    "name": "saoirse",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/saoirse.aiff",
+    "transcripts": [
+      "Sersha will join us tomorrow.",
+      "Saoirse will join us tomorrow."
+    ],
+    "expectedIndex": 1
+  },
+  {
+    "name": "niamh",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/niamh.aiff",
+    "transcripts": [
+      "I spoke with Neve about the design.",
+      "I spoke with Niamh about the design."
+    ],
+    "expectedIndex": 1
+  },
+  {
+    "name": "aisling",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/aisling.aiff",
+    "transcripts": [
+      "Please ask Ashling to review it.",
+      "Please ask Aisling to review it."
+    ],
+    "expectedIndex": 1
+  },
+  {
+    "name": "caoimhe",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/caoimhe.aiff",
+    "transcripts": [
+      "Call Kiva after lunch.",
+      "Call Caoimhe after lunch."
+    ],
+    "expectedIndex": 1
+  },
+  {
+    "name": "diksha",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/diksha.aiff",
+    "transcripts": [
+      "Please send this to Diksha.",
+      "Please send this to Diksha."
+    ],
+    "expectedIndex": 1
+  },
+  {
+    "name": "vocabulary",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/vocabulary.aiff",
+    "transcripts": [
+      "Please open Super Whisper.",
+      "Please open Superwhisper."
+    ],
+    "expectedIndex": 1
+  },
+  {
+    "name": "negative-maya",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-maya.aiff",
+    "transcripts": [
+      "Please send the revised document to Maya before Thursday afternoon.",
+      "Please send the revised document to Niamh before Thursday afternoon.",
+      "Please send the revised document to Siobhan before Thursday afternoon.",
+      "Please send the revised document to Mae before Thursday afternoon."
+    ],
+    "expectedIndex": 0
+  },
+  {
+    "name": "negative-sean",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-sean.aiff",
+    "transcripts": [
+      "I spoke with Sean.",
+      "I spoke with Siobhan."
+    ],
+    "expectedIndex": 0
+  },
+  {
+    "name": "negative-fruit",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-fruit.aiff",
+    "transcripts": [
+      "I ate an apple after lunch.",
+      "I ate an Apple after lunch."
+    ],
+    "expectedIndex": 0
+  },
+  {
+    "name": "negative-time",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-time.aiff",
+    "transcripts": [
+      "We finished in quick time.",
+      "We finished in QuickTime."
+    ],
+    "expectedIndex": 0
+  },
+  {
+    "name": "negative-may",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-may.aiff",
+    "transcripts": [
+      "The weather may improve tomorrow.",
+      "The weather Mae improve tomorrow."
+    ],
+    "expectedIndex": 0
+  },
+  {
+    "name": "negative-rock",
+    "audio": "/Users/march/Projects/quibble/.build/name-audio/negative-rock.aiff",
+    "transcripts": [
+      "The obsidian rock was black.",
+      "The Obsidian rock was black."
+    ],
+    "expectedIndex": 0
+  }
+]

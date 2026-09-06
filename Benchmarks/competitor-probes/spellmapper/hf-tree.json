@@ -1,0 +1,50 @@
+[
+  {
+    "type": "file",
+    "oid": "06fa409ca69e8a52c2e0d86daec40fab4b05bc43",
+    "size": 1649,
+    "path": ".gitattributes"
+  },
+  {
+    "type": "file",
+    "oid": "09277aa7aa438cc3d73fb873ad3e41af866c9a1c",
+    "size": 1643,
+    "path": "README.md"
+  },
+  {
+    "type": "file",
+    "oid": "8db70afe3adf74584c4d69deab481874b17d5455",
+    "size": 93015503,
+    "lfs": {
+      "oid": "b86f34ae4cfe780bced566afccd2177e9045dbe8f24f65d5d97fa5556680fd8c",
+      "size": 93015503,
+      "pointerSize": 133
+    },
+    "xetHash": "be59ab3a0b3b4065087d2edb93369550dee85a4e71b8096be6fca1672dd9c23c",
+    "path": "big_sample.txt"
+  },
+  {
+    "type": "file",
+    "oid": "207af88497e25030841f4bdcd14c042bfadfcf34",
+    "size": 113870348,
+    "lfs": {
+      "oid": "4554c1cb75beda589f5ae77b1ecab4e927332a0ce77deb84dc5279c12aad9c60",
+      "size": 113870348,
+      "pointerSize": 134
+    },
+    "xetHash": "0ade10239896984cc9f546e29a7110a80e698589605d4224d54d492f8eb97f95",
+    "path": "replacement_vocab_filt.txt"
+  },
+  {
+    "type": "file",
+    "oid": "9b57e7e2d01d39122d3fa6fc806282f2919bce16",
+    "size": 268216320,
+    "lfs": {
+      "oid": "0295a34a5522257bdae22c714ca990c5e5a5eb444e82597944785fcfae93516d",
+      "size": 268216320,
+      "pointerSize": 134
+    },
+    "xetHash": "76b9f4df2945a716590ff9fc2ca1b56455ea099488cdaf67bd7c0b5dfe0f182f",
+    "path": "training_10m_5ep.nemo"
+  }
+]

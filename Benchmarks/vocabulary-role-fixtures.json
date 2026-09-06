@@ -1,0 +1,98 @@
+[
+  {
+    "text": "{\"sentence\": \"We finished in quick time.\", \"phrase\": \"quick time\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"Please open quick time player.\", \"phrase\": \"quick time\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  },
+  {
+    "text": "{\"sentence\": \"I heard a super whisper.\", \"phrase\": \"super whisper\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"Please open super whisper.\", \"phrase\": \"super whisper\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  },
+  {
+    "text": "{\"sentence\": \"I ate an apple after lunch.\", \"phrase\": \"apple\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"Apple released a new computer.\", \"phrase\": \"Apple\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  },
+  {
+    "text": "{\"sentence\": \"Open apple mail.\", \"phrase\": \"apple\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  },
+  {
+    "text": "{\"sentence\": \"Apple pie is delicious.\", \"phrase\": \"Apple\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"The obsidian rock was black.\", \"phrase\": \"obsidian\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"Open obsidian and take notes.\", \"phrase\": \"obsidian\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  },
+  {
+    "text": "{\"sentence\": \"The weather may improve tomorrow.\", \"phrase\": \"may\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"Please send this to May.\", \"phrase\": \"May\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  },
+  {
+    "text": "{\"sentence\": \"We will meet in May.\", \"phrase\": \"May\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"They often quibble about the price.\", \"phrase\": \"quibble\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "ORDINARY"
+  },
+  {
+    "text": "{\"sentence\": \"Use quibble to dictate this.\", \"phrase\": \"quibble\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  },
+  {
+    "text": "{\"sentence\": \"Use postgress for our database.\", \"phrase\": \"postgress\"}",
+    "words": [],
+    "corrections": {},
+    "expected": "NAME"
+  }
+]

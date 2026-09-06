@@ -1,0 +1,23 @@
+--- Inference/Sources/QuibbleInference/LocalInference.swift
++++ Inference/Sources/QuibbleInference/LocalInference.swift
+@@ -57,6 +57,7 @@
+ 
+ public actor LocalInference {
+     private var cohere: CohereTranscribeModel?
++    private var probeWhisper: WhisperModel?
+     private var parakeet: ParakeetModel?
+     private var qwenASR: Qwen3ASRModel?
+     private var cleanup: ModelContainer?
+@@ -234,3 +235,12 @@
+         return output.trimmingCharacters(in: .whitespacesAndNewlines)
+     }
+ }
++
++extension LocalInference {
++    public func probeWhisperVocabulary(file: URL, directory: URL, words: [String]) async throws -> String {
++        if probeWhisper == nil { probeWhisper = try await WhisperModel.fromDirectory(directory) }
++        let (_, audio) = try loadAudioArray(from: file, sampleRate: 16_000)
++        probeWhisper!.probeInitialPrompt = words.joined(separator: ", ")
++        return probeWhisper!.generate(audio: audio, generationParameters: STTGenerateParameters(maxTokens: 256, language: "en")).text
++    }
++}

@@ -1,0 +1,39 @@
+--- App/VocabularyBenchmark.swift
++++ App/VocabularyBenchmark.swift
+@@ -126,3 +126,36 @@
+         try JSONSerialization.data(withJSONObject: results, options: [.prettyPrinted, .sortedKeys]).write(to: URL(fileURLWithPath: args[3]), options: .atomic)
+     }
+ }
++
++extension VocabularyBenchmark {
++    private struct WhisperFixture: Decodable {
++        let name: String
++        let audio: String
++        let expected: String
++        let baselines: [String: String]
++    }
++    private struct WhisperFixtures: Decodable { let words: [String]; let cases: [WhisperFixture] }
++    @MainActor static func runWhisper(_ args: [String]) async throws {
++        guard args.count == 4 else { throw CocoaError(.fileReadInvalidFileName) }
++        let fixtures = try JSONDecoder().decode(WhisperFixtures.self, from: Data(contentsOf: URL(fileURLWithPath: args[2])))
++        let engine = LocalInference()
++        let entries = fixtures.words.map { VocabularyEntry(preferred: $0) }
++        var rows: [[String: Any]] = []
++        for hints in [false, true] {
++            for fixture in fixtures.cases {
++                for run in 0..<2 {
++                    let start = ProcessInfo.processInfo.systemUptime
++                    let text = try await engine.probeWhisperVocabulary(file: URL(fileURLWithPath: fixture.audio),
++                        directory: URL(fileURLWithPath: args[1]), words: hints ? fixtures.words : [])
++                    let elapsed = ProcessInfo.processInfo.systemUptime - start
++                    var projected: [String: String] = [:]
++                    for (name, raw) in fixture.baselines { projected[name] = VocabularyEdits.project(text, onto: raw, entries: entries).text }
++                    rows.append(["case": fixture.name, "hints": hints, "run": run, "response": text,
++                        "expected": fixture.expected, "projected": projected, "seconds": elapsed, "memory": await engine.memoryUsage()])
++                    try JSONSerialization.data(withJSONObject: rows, options: [.prettyPrinted, .sortedKeys]).write(to: URL(fileURLWithPath: args[3]), options: .atomic)
++                    print("\(hints) \(fixture.name): \(text)")
++                }
++            }
++        }
++    }
++}

@@ -1,0 +1,36 @@
+--- Inference/Sources/QuibbleInference/LocalInference.swift
++++ Inference/Sources/QuibbleInference/LocalInference.swift
+@@ -86,7 +86,22 @@
+             throw InferenceError.missingModel(engine.displayName)
+         }
+         if (engine == .cohere || engine == .cohere4bit) && cohere == nil { parakeet = nil; cohere = try CohereTranscribeModel.fromDirectory(speechDirectory) }
+-        if engine == .parakeet && parakeet == nil { cohere = nil; parakeet = try ParakeetModel.fromDirectory(speechDirectory) }
++        if engine == .parakeet && parakeet == nil {
++            cohere = nil; parakeet = try ParakeetModel.fromDirectory(speechDirectory)
++            if CommandLine.arguments.contains("--benchmark"),
++               let path = ProcessInfo.processInfo.environment["QUIBBLE_PARAKEET_BIAS_GRAPH"] {
++                let data = try Data(contentsOf: URL(fileURLWithPath: path))
++                let config = try JSONDecoder().decode(ParakeetProbeGraph.self, from: data)
++                let alpha = Float(ProcessInfo.processInfo.environment["QUIBBLE_PARAKEET_BIAS_ALPHA"] ?? "1") ?? 1
++                let rows = config.rows.map { MLXArray($0) * alpha }
++                for row in rows { MLX.eval(row) }
++                var state = 0
++                parakeet!.probeVocabularyBias = { token in
++                    if let token { state = config.transitions[state][token] } else { state = 0 }
++                    return rows[state]
++                }
++            }
++        }
+         if engine == .qwenASR && qwenASR == nil { qwenASR = try await Qwen3ASRModel.fromModelDirectory(speechDirectory) }
+         if withCleanup { instructionModel = nil }
+         if withCleanup && cleanup == nil {
+@@ -234,3 +249,9 @@
+         return output.trimmingCharacters(in: .whitespacesAndNewlines)
+     }
+ }
++
++// Benchmark-only dense export of the pinned NVIDIA phrase tree.
++private struct ParakeetProbeGraph: Decodable {
++    let rows: [[Float]]
++    let transitions: [[Int]]
++}

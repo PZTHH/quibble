@@ -1,0 +1,14 @@
+--- Inference/Sources/QuibbleInference/LocalInference.swift
++++ Inference/Sources/QuibbleInference/LocalInference.swift
+@@ -234,3 +234,11 @@
+         return output.trimmingCharacters(in: .whitespacesAndNewlines)
+     }
+ }
++
++extension LocalInference {
++    public func probeAcousticVocabulary(file: URL, root: URL, transcripts: [String]) async throws -> [[Float]] {
++        _ = try await load(root: root, withCleanup: false, engine: .cohere4bit)
++        let (_, audio) = try loadAudioArray(from: file, sampleRate: 16_000)
++        return cohere!.probeTranscriptLikelihoods(audio: audio, transcripts: transcripts)
++    }
++}
