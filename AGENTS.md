@@ -44,9 +44,9 @@ Quibble is a native macOS dictation app in active development. Read the relevant
 
 The existing development app uses bundle ID `com.pezhvak.quibble`, Apple Development signing from `Config/Signing.xcconfig`, and the team ID in `Config/Signing.local.xcconfig`, which is untracked and specific to this Mac. Its stable path is:
 
-`/Users/march/Projects/quibble/DerivedData/Build/Products/Release/Quibble.app`
+`/Applications/Quibble.app`
 
-Keep that identity and path stable for this installation. Do not alternate ad-hoc/development/distribution signing or reset TCC to make a test pass. Developers on other machines copy `Config/Signing.local.xcconfig.example` and set their own team there. `Config/Distribution.xcconfig` and `Scripts/build-release.sh` cover builds that leave this Mac; they clear the checkout models path and require Developer ID signing. Compatible designated requirements are a prerequisite, not proof that permissions survive a real update.
+Keep that identity and path stable for this installation. Do not alternate ad-hoc/development/distribution signing or reset TCC to make a test pass. Developers on other machines copy `Config/Signing.local.xcconfig.example` and set their own team there. `Config/Distribution.xcconfig` and `Scripts/build-release.sh` cover builds that leave this Mac; they clear the checkout models path and require Developer ID signing. Compatible designated requirements are a prerequisite, not proof that permissions survive a real update. The installation moved from the checkout's `DerivedData` products folder to `/Applications` on 2026-09-06, at build 32; Microphone and Accessibility grants carried across that move because the designated requirement matched. A stale bundle may remain under `DerivedData/Build/Products/Release/`; it is build output, not the installation.
 
 Build into a staging directory so compilation cannot mutate the running app bundle:
 

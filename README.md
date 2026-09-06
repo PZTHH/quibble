@@ -109,7 +109,7 @@ codesign --verify --deep --strict --verbose=2 .build/install-staging/Quibble.app
 
 On the current development Mac, append `-toolchain com.apple.dt.toolchain.Metal.32023.883` to the `xcodebuild` invocation. That is a machine-specific workaround; see [Metal toolchain setup](Docs/Setup/METAL-TOOLCHAIN.md) before using it elsewhere. `Scripts/generate-project.py` regenerates the Xcode project without XcodeGen or Ruby dependencies.
 
-Do not replace a running app bundle. Wait until Quibble is idle, quit it, and install the verified staged app at the existing development path, `DerivedData/Build/Products/Release/Quibble.app`. Verify the installed signature before reopening. Session-only history does not survive a restart.
+Do not replace a running app bundle. Wait until Quibble is idle, copy the verified staged app to where you keep it installed, quit the running copy through its own menu, then reopen the installed one. Verify the installed signature before reopening. Session-only history does not survive a restart.
 
 A development build defaults to the checkout’s `Models` directory; **Models → Storage & loading → Choose folder…** lets you choose another folder. `Scripts/build-release.sh` builds with `Config/Distribution.xcconfig`, which clears that default so a distributed app uses `~/Library/Application Support/Quibble/Models` instead, and fails the build if a checkout path leaks into the bundle. That script stops before notarization and prints the `notarytool` commands, which need your own credentials. For explicit command-line downloads:
 
